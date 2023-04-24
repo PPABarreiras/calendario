@@ -1,0 +1,68 @@
+<script src="editStudent.js" defer>
+
+</script>
+<link rel="stylesheet" href="editStudent.css">
+
+
+<div id="editStudent" class="editStudentBox">
+	<div class="editStudent">
+		<button class='closeEditStudent'>x</button>
+		<h3 class='subtitle'>Editar aluno</h3>
+
+		<form>
+
+			<input class="contentsEditStudent" type="text" placeholder="Nome completo" required="required" name="name"
+				id="name">
+			<div class="dataInput">
+				<input class="contentsEditStudent" type="text" placeholder="Matricula" required="required"
+					name="matricula" id="matricula">
+				<input class="contentsEditStudent" type="email" placeholder="Email" required="required" name="email"
+					id="email">
+
+			</div>
+
+			<div class="dataInput">
+				<input class="contentsEditStudent" type="password" placeholder="Senha" required="required"
+					name="password" id="password">
+				<input class="contentsEditStudent" type="password" placeholder="Confirmar senha" required="required"
+					name="confirmPassword" id="confirmPassword">
+			</div>
+
+			<div class="contentOptions">
+				<div class="customRadio">
+					<label for="class">Turma</label><br>
+					<div class="contentRadio">
+						<input type="radio" name="class" id="class713" value="1">
+						<label for="class713">713</label><br>
+						<input type="radio" id="class722" name="class" value="2">
+						<label for="class722">722</label><br>
+						<input type="radio" id="class732" name="class" value="3">
+						<label for="class732">732</label>
+					</div>
+				</div>
+
+				<div class="customCheckbox">
+					<label for="matter">Matérias</label><br>
+					<div class="contentCheckbox">
+						<input type="checkbox" name="matter" id="portugues" value="1">
+						<label for="portugues"> Português </label><br>
+
+						<input type="checkbox" name="matter" id="matematica" value="2">
+						<label for="matematica"> Matemática </label><br>
+
+						<input type="checkbox" name="matter" id="historia" value="3">
+						<label for="historia"> História </label><br>
+					</div>
+				</div>
+			</div>
+
+			<input type="submit" value="Confirmar">
+
+		</form>
+
+	</div>
+
+</div>
+
+
+<button class="insertEditStudent" onClick='showEditStudent("editStudent")'><img src="edit.svg"	alt="editar aluno"></button>

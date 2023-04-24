@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="login.js" defer></script>
+    <link rel="stylesheet" href="teacherLogin.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="loginBox">
+            <nav>
+                <ul>
+                    <li name="teacher">
+                        <a href="teacherLogin.html">Professor</a>
+                    </li>
+                    <li name="student">
+                        <a href="studentLogin.html">Aluno</a>
+                    </li>
+                </ul>
+            </nav>
+            <form name="formLogin">
+                <label for="siape" name="siape">N° Siape</label>
+                <input class="inputContent" type="text" required="required" name="siape" id="siape">
+                <label for="password" name="passoword">Senha</label>
+                <input class="inputContent" type="password" required="required" name="password" id="password">
+                <input type="submit" value="Entrar">
+            </form>
+        </div>
+        <img
+                    src="teacher.svg">
+        </div>
+</body>
+
+</html>

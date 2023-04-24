@@ -1,0 +1,452 @@
+* {
+    margin: 0px;
+    margin-block: 0;
+    border: 0px;
+    outline: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerFull{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+
+background: #ffffff;
+
+}
+
+.containerField{
+    position: absolute;
+    width: 724px;
+    height: 190px;
+    left: 72px;
+    top: 110px;
+
+    background: #FFFFFF;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.formLoginAdcTurma{
+    width: 100%;
+    height: 100%;
+    line-height: 90px;
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[placeholder="Nº da Turma"]{
+
+    position: absolute;
+    width: 420.89px;
+    height: 45px;
+    left: 32px;
+    top: 40px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    padding-left: 7px;
+    
+    color: #9D9D9D;
+}
+
+#registrationTurma{
+    position: absolute;
+    box-sizing: border-box;
+
+    width: 297px;
+    height: 50px;
+    left: 32px;
+    top: 30px;
+    
+    background: #FFFFFF;
+    border: 2px solid #9D9D9D;
+    border-radius: 5px;
+}
+
+
+input[placeholder ="Périodo"]{
+    position: absolute;
+    width: 200.97px;
+    height: 45px;
+    left: 30px;
+    top: 130px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    padding-left: 7px;
+    
+    color: #9D9D9D;
+
+}
+
+#registrationPeriodo{
+    position: absolute;
+    box-sizing: border-box;
+
+    width: 297px;
+    height: 50px;
+    left: 380px;
+    top: 15px;
+    
+    background: #FFFFFF;
+    border: 2px solid #9D9D9D;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+select[placeholder="Selecione um Curso"]{
+    position: absolute;
+    width: 200.97px;
+    height: 45px;
+    left: 30px;
+    top: 220px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 30px;
+    padding-left: 7px;
+
+    color: #9D9D9D;
+}
+
+#SelecioneUmCurso{
+    position: absolute;
+    width: 652px;
+    height: 50px;
+    left: 20px;
+    top: 90px;
+
+    background: #FFFFFF;
+    border: 2px solid #9D9D9D;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+
+button[name ="buttonAdc"]{
+    position: absolute;
+    width: 204px;
+    height: 47px;
+    left: 1221px;
+    top: 130px;
+    cursor: pointer;
+    background: #3ABA19;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+}
+
+#buttonAdc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 45px;
+
+    text-align: center;
+
+    color: #000000;
+}
+
+#buttonAdc:hover{
+    background-color: rgb(59, 88, 0);
+}
+
+button[name="buttonBuscar"]{
+    position: absolute;
+    width: 204px;
+    height: 47px;
+    left: 1221px;
+    top: 216px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.5);
+    border-radius: 35px;
+}
+
+#buttonBuscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+
+    color: #000000;
+}
+
+#buttonBuscar:hover{
+    background-color: rgb(50, 64, 78);
+}
+
+.containerFieldAdc{
+    position: absolute;
+
+    width: 90%;
+    height: 44%;
+    left: 72px;
+    top: 390px;
+
+    background: #FFFFFF;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    overflow-y: scroll;
+    
+}
+
+.contentFieldAdc{
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: 32px;
+    top: 20px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content{
+    position: absolute;
+    
+    left: 15px;
+    top: 10px;
+}
+
+.contentFielAdc1{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: 32px;
+    top: 90px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content1{
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc2{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+
+.content2{
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc3{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content3{
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc4{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content4{
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc5{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 1320px;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content5{
+    position: absolute;
+
+    left: 15px;
+    top: 10px;
+}
+
+
+
+.lixeira{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+
+.lixeira1{
+    position: absolute;
+    
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira2{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira3{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira4{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira5{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis1{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis2{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis3{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis4{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis5{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}

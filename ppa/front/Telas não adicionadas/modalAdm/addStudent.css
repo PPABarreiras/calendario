@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.addStudentBox {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: silver;
+    z-index: 100;
+    animation: back 300ms linear both;
+}
+
+@keyframes back {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.showAddStudent {
+    display: flex;
+}
+
+.insertAddStudent {
+    width: 10%;
+    height: 3rem;
+    margin: 65rem 5rem 30rem 80rem;
+    background-color: #3ABA19;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.addStudent {
+    width: 600px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 50px 20px;
+    background: white;
+    border-radius: 10px;
+    animation: reminder 300ms both;
+}
+
+.subtitle {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@keyframes reminder {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contentsAddStudent:focus {
+    border-color: black;
+}
+
+input[name='name'] {
+    width: 100%;
+    height: 2rem;
+    align-items: center;
+    background: none;
+    border: 2px solid silver;
+    border-radius: 5px;
+}
+
+input[name='matricula'] {
+    width: 260px;
+    height: 2rem;
+    margin-top: 10px;
+    background: none;
+    border: 2px solid silver;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+input[name='email'] {
+    width: 260px;
+    height: 2rem;
+    margin-top: 10px;
+    background: none;
+    border: 2px solid silver;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+input[name='password'] {
+    width: 260px;
+    height: 2rem;
+    margin-top: 10px;
+    background: none;
+    border: 2px solid silver;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+input[name='confirmPassword'] {
+    width: 260px;
+    height: 2rem;
+    margin-top: 10px;
+    background: none;
+    border: 2px solid silver;
+    border-radius: 5px;
+    font-family: 'Poppins';
+}
+
+.contentOptions {
+    width: 71%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 15%;
+}
+
+.contentCheckbox {
+    margin-top: 5%;
+}
+
+.contentRadio {
+    margin-top: 10%;
+}
+
+.customCheckbox input,
+.customRadio input {
+    display: none;
+    flex-direction: column;
+}
+
+.contentRadio label {
+    color: silver;
+}
+
+input[type="radio"]:checked+label {
+    color: black;
+}
+
+.customRadio input+label:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid silver;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.customRadio input:checked+label:before {
+    background-color: #3ABA19;
+    border-color: black;
+    box-sizing: border-box;
+    padding: 6px;
+}
+
+.contentCheckbox label {
+    color: silver;
+}
+
+input[type="checkbox"]:checked+label {
+    color: black;
+}
+
+.customCheckbox input+label:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid silver;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.customCheckbox input:checked+label:before {
+    background-image: url("confirm.svg");
+    background-color: white;
+    background-position: center;
+    border: 1px solid black;
+}
+
+input[type='submit'] {
+    width: 30%;
+    height: 2.5rem;
+    margin-bottom: 10%;
+    margin-left: 67%;
+    border-radius: 100px;
+    background: #3ABA19;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.closeAddStudent {
+    top: 5px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.dataInput {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}

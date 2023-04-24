@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+}
+
+.reminderBox {
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: silver;
+	z-index: 100;
+	animation: back 300ms linear both;
+}
+
+@keyframes back {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.showReminder {
+	display: flex;
+}
+
+.insertReminder {
+	width: 1.2%;
+	margin: 5rem -5rem 35rem 85rem;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: 0.2px 0.2px 5px ;
+	color: black;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+  }
+
+form {
+	width: 100%;
+    padding: 10px 10px 10px 10px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	flex-direction: column;	
+}
+
+.reminder {
+	width: 400px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	padding: 50px 20px;
+    background: white;
+	border-radius: 10px;
+	animation: reminder 300ms both;
+}
+
+.subtitle {
+	margin-bottom: 2%;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@keyframes reminder {
+	from {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.contentsReminder:focus{
+	border-color: black;
+}
+
+input[name='title'] {
+	width: 100%;
+	height: 2rem;
+	align-items: center;
+	background: none;
+	border: 2px solid silver;
+    border-radius: 5px;
+}
+
+input[type='date'] {
+	width: 45%;
+	height: 2rem;
+	margin-top: 10px;
+	background: none;
+	border: 2px solid silver;
+	border-radius: 5px; 
+	font-family: 'Poppins';
+}
+
+input[name='note'] {
+	width: 45%;
+	height: 2rem;
+	margin-top: 10px;
+	background: none;
+	border: 2px solid silver;
+	border-radius: 5px; 
+	font-family: 'Poppins';
+}
+
+input[name='description'] {
+	width: 100%;
+	height: 5rem;
+	margin-top: 10px;
+	border: 2px solid silver;
+ 	border-radius: 5px;
+}
+
+select {
+	width: 50%;
+	height: 2rem;
+	margin-top: 10px;
+	background: none;
+	color: silver;
+	border: 2px solid silver;
+	border-radius: 5px;
+}
+
+option[value=""][disabled] {
+	display: none;
+}
+
+select:valid{
+	color: black;
+}
+
+input[type='submit'] {
+	width: 35%;
+	height: 2.5rem;
+	margin-bottom: 5%;
+  	margin-left: 65%;
+	border-radius: 100px; 
+	background: green;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+}
+
+.closeReminder {
+	top: 5px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 20px;
+	background-color: white;
+	color: black;
+	cursor: pointer;
+}
+
+.dataInput
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}

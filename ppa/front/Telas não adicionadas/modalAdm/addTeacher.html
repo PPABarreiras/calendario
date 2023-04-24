@@ -1,0 +1,65 @@
+<script src="addTeacher.js" defer>
+
+</script>
+<link rel="stylesheet" href="addTeacher.css">
+
+
+<div id="addTeacher" class="addTeacherBox">
+
+    <div class="addTeacher">
+
+        <button class='closeAddTeacher'>x</button>
+        <h3 class='subtitle'>Adicionar novo professor</h3>
+
+        <form>
+
+            <input class="contentsAddTeacher" type="text" placeholder="Nome completo" required="required" name="name"
+                id="name">
+
+            <div class="dataInput">
+                <input class="contentsAddTeacher" type="text" placeholder="SIAPE" required="required" name="siape"
+                    id="siape">
+                <input class="contentsAddTeacher" type="email" placeholder="Email" required="required" name="email"
+                    id="email">
+
+            </div>
+
+            <div class="dataInput">
+                <input class="contentsAddTeacher" type="password" placeholder="Senha" required="required"
+                    name="password" id="password">
+                <input class="contentsAddTeacher" type="password" placeholder="Confirmar senha" required="required"
+                    name="confirmPassword" id="confirmPassword">
+            </div>
+
+            <label for="ClassMatter">Adicione as turmas e matérias</label>
+
+
+
+
+            <div class="dataInput">
+
+                <select class="contentClass" required>
+                    <option value="" disabled selected>Selecione uma turma...</option>
+                    <option value="1"> 712</option>
+                    <option value="3">722</option>
+                    <option value="2">732</option>
+                </select>
+
+                <select class="contentMatter" required>
+                    <option value="" disabled selected>Selecione uma matéria...</option>
+                    <option value="1"> Redes de Computadores</option>
+                    <option value="3"> Matemática</option>
+                    <option value="2"> Biologia</option>
+                </select>
+            </div>
+            <input type="submit" value="Adicionar">
+
+        </form>
+    </div>
+
+
+
+</div>
+
+<button class="insertAddTeacher" onClick='showAddTeacher("addTeacher")'>Adicionar</button>
+</div>

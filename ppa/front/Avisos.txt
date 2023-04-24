@@ -1,0 +1,2 @@
+A pasta "ppa" está o site em si, nele foi feita algumas conexões com o back end, porém não estão ligadas.
+A pasta "Telas não adicionadas", são as telas que faltam juntar com o site.

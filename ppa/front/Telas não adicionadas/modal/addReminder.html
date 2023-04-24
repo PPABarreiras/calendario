@@ -1,0 +1,37 @@
+<script src="addReminder.js" defer>
+
+</script>
+<link rel="stylesheet" href="addReminder.css">
+
+
+<div id="reminder" class="reminderBox">
+	<div class="reminder">
+		<button class='closeReminder'>x</button>
+		<h3 class='subtitle'>Adicionar lembrete</h3>
+
+		<form>
+
+			<input class="contentsReminder" type="text" placeholder="Título" name="title" id="title">
+			<div class="dataInput">
+				<input class="contentsReminder" required type="date">
+				<input class="contentsReminder" type="text" placeholder="Nota" name="note" id="note">
+			</div>
+			<input class="contentsReminder" type="text" placeholder="Descrição" name="description" id="description">
+
+			<select class="contentsReminder" required>
+				<option value="" disabled selected>Tipo de Tarefa</option>
+				<option value="1"> Atividade</option>
+				<option value="3">Prova</option>
+				<option value="2">Seminário</option>
+			</select>
+	
+
+			<input type="submit" value="Confirmar">
+
+		</form>
+
+	</div>
+
+</div>
+
+<button class="insertReminder" onClick='showReminder("reminder")'>+</button>

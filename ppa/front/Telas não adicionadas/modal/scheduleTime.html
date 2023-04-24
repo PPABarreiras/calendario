@@ -1,0 +1,43 @@
+<script src="scheduleTime.js" defer>
+
+</script>
+<link rel="stylesheet" href="scheduleTime.css">
+
+
+<div id="time" class="timeBox">
+	<div class="time">
+		<button class='closeTime'>x</button>
+		<h3 class='subtitle'>Agendar horário</h3>
+
+		<form>
+
+			<input class="contentsTime" type="text" placeholder="Seu nome..." name="name" id="name"><br>
+			<select class="contentsTime" required>
+				<option value="" disabled selected>Disciplina</option>
+				<option value="1">Inglês</option>
+				<option value="3">Matemática</option>
+				<option value="2">Português</option>
+			</select>
+
+			<input class="contentsTime" type="text" placeholder="Descrição" name="description" id="description"><br>
+			
+			<div class="vacantTime">
+				<input type="checkbox" name="vacantTime" value="1">
+				<label for="primeiroHorario"> 07:00 - 07:45 </label>
+				<input type="checkbox" name="vacantTime" value="2">
+				<label for="segundoHorario"> 7:45 - 8:30 </label>
+				<input type="checkbox" name="vacantTime" value="3">
+				<label for="terceiroHorario"> 8:00 - 09:15 </label>
+				<input type="checkbox" name="vacantTime" value="4">
+				<label for="quartoHorario"> 9:15 - 10:00 </label>
+			</div>
+
+			<input type="submit" value="Confirmar">
+
+		</form>
+
+	</div>
+
+</div>
+
+<button class="insertTime" onClick='showTime("time")'>+</button>

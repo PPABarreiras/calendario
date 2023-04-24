@@ -1,0 +1,73 @@
+<script src="deleteStudent.js" defer>
+
+</script>
+<link rel="stylesheet" href="deleteStudent.css">
+
+
+<div id="deleteStudent" class="deleteStudentBox">
+	<div class="deleteStudent">
+		<button class='closeDeleteStudent'>x</button>
+		<h3 class='subtitle'>Excluir aluno</h3>
+
+		<form>
+
+			<input readonly class="contentsDeleteStudent" type="text" placeholder="Nome completo" required="required"
+				name="name" id="name">
+			<div class="dataInput">
+				<input readonly class="contentsDeleteStudent" type="text" placeholder="Matricula" required="required"
+					name="matricula" id="matricula">
+				<input readonly class="contentsDeleteStudent" type="email" placeholder="Email" required="required"
+					name="email" id="email">
+
+			</div>
+
+			<div class="dataInput">
+				<input readonly class="contentsDeleteStudent" type="password" placeholder="Senha" required="required"
+					name="password" id="password">
+				<input readonly class="contentsDeleteStudent" type="password" placeholder="Confirmar senha"
+					required="required" name="confirmPassword" id="confirmPassword">
+			</div>
+
+			<div class="contentOptions">
+				<div class="customRadio">
+					<label for="class">Turma</label><br>
+					<div class="contentRadio">
+						<input disabled type="radio" name="class" id="class713" value="1">
+						<label for="class713">713</label><br>
+						<input disabled type="radio" id="class722" name="class" value="2">
+						<label for="class722">722</label><br>
+						<input disabled type="radio" id="class732" name="class" value="3">
+						<label for="class732">732</label>
+					</div>
+				</div>
+
+				<div class="customCheckbox">
+					<label for="matter">Matérias</label><br>
+					<div class="contentCheckbox">
+						<input disabled type="checkbox" name="portugues" id="portugues" value="1">
+						<label for="portugues"> Português </label><br>
+
+						<input disabled type="checkbox" name="matematica" id="matematica" value="2">
+						<label for="matematica"> Matemática </label><br>
+
+						<input disabled type="checkbox" name="historia" id="historia" value="3">
+						<label for="historia"> História </label><br>
+					</div>
+				</div>
+			</div>
+
+			<div class="contentConfirmDelete">
+				<div class="confirmDelete">
+					<input type="checkbox" name="delete" id="delete" required>
+					<label for="delete">Tenho ciência de que estou excluindo o registro de um aluno. </label>
+				</div>
+				<input type="submit" id="buttonDelete" disabled value="Confirmar">
+			</div>
+
+		</form>
+
+	</div>
+
+</div>
+<button class="insertDeleteStudent" onClick='showDeleteStudent("deleteStudent")'> <img src="delete.svg"
+		alt="excluir aluno"></button>
