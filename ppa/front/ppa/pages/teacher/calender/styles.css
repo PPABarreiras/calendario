@@ -1,0 +1,768 @@
+header {
+  width: 100%;
+  height: 50px;
+  background: gray;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.contentCalender {
+  width: 50%;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calender > table > thead > tr > th {
+  font-size: 25px;
+  user-select: none;
+}
+
+.calender > table > thead > tr:first-child > th:nth-child(2) {
+  font-weight: 500;
+}
+
+.calender > table > thead > tr:last-child > th {
+  font-weight: 700;
+}
+
+.selected {
+  border: 2px solid blue !important;
+}
+
+.calender > table > tbody > tr > td {
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  border: var(--border-gray);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 10px;
+  background: var(--color-white);
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.none {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.nextAndPreviousCalender {
+  background: none;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.detailsCalender {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.seeDetails {
+  width: 50%;
+  height: calc(100vh - 50px);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.tasks {
+  width: 70%;
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.vacantClasses {
+  width: 70%;
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.ballInfo {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.ballInfo > div {
+  width: 15px;
+  height: 15px;
+  border: var(--border-black);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.backGreen {
+  background-color: var(--color-green) !important;
+  color: var(--color-white);
+}
+
+.backYellow {
+  background-color: var(--color-yellow) !important;
+  color: var(--color-white);
+}
+
+.backOrange {
+  background-color: var(--color-orange) !important;
+  color: var(--color-white);
+}
+
+.backRed {
+  background-color: var(--color-red) !important;
+  color: var(--color-white);
+}
+
+.backBlue {
+  background-color: var(--color-blue);
+}
+
+.nameBlue {
+  color: var(--color-blue) !important;
+}
+
+.captured::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.containerViewTasks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.containerViewTasks > button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 7px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+.titleViewTasks {
+  font-size: 1.8rem;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.contentViewTasks {
+  width: 100%;
+  height: 80%;
+  border: var(--border-gray);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 10px;
+  background-color: #EFEFEF;
+  overflow: auto;
+  padding: 5% 0;
+}
+
+.contentViewTasks ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.viewTask {
+  list-style: none;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;a
+  background-color: var(--color-green);
+  border-radius: 5px;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: var(--text-shadow-black);
+  margin-bottom: 2%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.containerViewVacantClasses {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.containerViewVacantClasses > button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 7px;
+  background-color: var(--color-gray);
+  position: absolute;
+  top: 10px;
+  right: 0;
+  cursor: pointer;
+}
+
+
+.titleViewVacantClasses {
+  font-size: 1.8rem;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.contentViewVacantClasses {
+  width: 100%;
+  height: 80%;
+  border: var(--border-gray);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 10px;
+  background-color: var(--color-gray);
+  overflow: auto;
+  padding: 5% 0;
+}
+
+.contentViewVacantClasses ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.viewVacantClass {
+  list-style: none;
+  width: 90%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-blue);
+  border-radius: 5px;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: var(--text-shadow-black);
+  margin-bottom: 2%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.infosVacantClass {
+  position: relative;
+  height: 100px !important;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 15px;
+}
+
+.infosVacantClass > div {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  background-color: var(--color-gray-dark);
+  padding-left: 15%;
+}
+
+.vacantClass {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-black);
+  text-shadow: none;
+}
+
+.vacantClass > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: var(--color-blue);
+}
+
+.vacantClass > p {
+  width: 80%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.capturedVacantClass {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-black);
+  text-shadow: none;
+}
+
+.capturedVacantClass > span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color: var(--color-green);
+}
+
+.modalViewTaskContainer {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalViewTaskContent {
+  width: 50%;
+  max-height: 500px;
+  background-color: var(--color-gray);
+  padding: 1%;
+  border-radius: 10px;
+  position: relative;
+}
+
+#closeModalViewTask {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.boxHeader {
+  width: 100%;
+  padding: 2%;
+  background-color: var(--color-gray-dark);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.boxHeader > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.noteTask {
+  font-size: 1.5rem;
+  font-weight: 500;
+  border-bottom: var(--border-black);
+}
+
+.createdAtAndDeadline {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.boxContent {
+  width: 100%;
+  padding: 2%;
+  background-color: var(--color-gray-dark);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.descriptionViewTask {
+  overflow: auto;
+  max-height: 300px;
+  text-align: justify;
+}
+
+.reminderBox {
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	animation: back 300ms linear both;
+}
+
+@keyframes back {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.insertReminder {
+	width: 1.2%;
+	margin: 5rem -5rem 35rem 85rem;
+	background-color: var(--color-white);
+	border-radius: 5px;
+	box-shadow: 0.2px 0.2px 5px ;
+	color: var(--color-black);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+.reminder > form {
+	width: 100%;
+  padding: 10px 10px 10px 10px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	flex-direction: column;	
+}
+
+.reminder {
+	width: 400px;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	padding: 50px 20px;
+  background-color: var(--color-white);
+	border-radius: 10px;
+	animation: reminder 300ms both;
+}
+
+.subtitle {
+	margin-bottom: 2%;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@keyframes reminder {
+	from {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.contentsReminder:focus{
+	border-color: var(--color-black);
+}
+
+input[name='title'] {
+	width: 100%;
+	height: 2rem;
+	align-items: center;
+	background: none;
+  color: var(--color-black);
+	border: var(--border-gray);
+  border-radius: 5px;
+  padding-left: 1%;
+}
+
+input[name='date'] {
+	width: 45%;
+	height: 2rem;
+	margin-top: 10px;
+  color: var(--color-black);
+	background: none;
+	border: var(--border-gray);
+	border-radius: 5px; 
+	font-family: 'Poppins';
+  padding-left: 1%;
+}
+
+input[name='note'] {
+	width: 45%;
+	height: 2rem;
+	margin-top: 10px;
+	background: none;
+  color: var(--color-black);
+	border: var(--border-gray);
+	border-radius: 5px; 
+	font-family: 'Poppins';
+  padding-left: 1%;
+}
+
+.reminder > form input::placeholder,
+.reminder > form textarea::placeholder {
+  color: var(--color-black);
+}
+
+textarea[name='description'] {
+	width: 100%;
+	height: 5rem;
+	margin-top: 10px;
+	border: var(--border-gray);
+ 	border-radius: 5px;
+  padding-left: 1%;
+  padding-top: 1%;
+  resize: none;
+}
+
+.reminder > form > select {
+	width: 50%;
+	height: 2rem;
+	margin-top: 10px;
+	background: none;
+	color: var(--color-black);
+	border: var(--border-gray);
+	border-radius: 5px;
+}
+
+.reminder > form > select > option[value=""][disabled] {
+	display: none;
+}
+
+.reminder > form > select:valid{
+	color: var(--color-black);
+}
+
+.reminder > form > input[type='submit'] {
+	width: 35%;
+	height: 2.5rem;
+	margin-bottom: 5%;
+  margin-left: 65%;
+	border-radius: 100px; 
+	background-color: var(--color-green);
+	font-family: 'Poppins';
+	font-weight: 500;
+	font-size: 1rem;
+	color: var(--color-white);
+	cursor: pointer;
+}
+
+.closeReminder {
+	top: 5px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 20px;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	cursor: pointer;
+}
+
+.dataInput {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.timeBox {
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	animation: back 300ms linear both;
+}
+
+@keyframes back {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.insertTime {
+	width: 1.2%;
+	margin: 35rem -5rem 25rem 85rem;
+	background-color: var(--color-white);
+	border-radius: 5px;
+	box-shadow: 0.2px 0.2px 5px ;
+	color: var(--color-black);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 15px;
+	cursor: pointer;
+  }
+
+.time > form {
+	width: 100%;
+  padding: 10px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	flex-direction: column;
+}
+
+.time {
+	width: 400px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	padding: 50px 20px;
+  background: var(--color-white);
+	border-radius: 10px;
+	animation: time 300ms both;
+}
+
+.subtitle {
+	margin-top: 2%;
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 20px;
+}
+
+@keyframes time {
+	from {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.contentsTime:focus{
+	border-color: var(--color-black);
+}
+
+input[name='name'] {
+	width: 100%;
+	height: 2rem;
+	align-items: center;
+	background: none;
+	border: var(--border-gray);
+  border-radius: 5px;
+  padding-left: 1%;
+}
+
+.time > form > select {
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 5%;
+	background: none;
+	color: var(--color-black);
+	border: var(--border-gray);
+	border-radius: 5px;
+}
+
+.time > form > select > option[value=""][disabled] {
+	display: none;
+}
+
+.time > form > select:valid{
+	color: var(--color-black);
+}
+
+.time > form input[name='description'] {
+	width: 100%;
+	height: 5rem;
+	border: var(--border-gray);
+ 	border-radius: 5px;
+}
+
+.time > form input::placeholder,
+.time > form textarea::placeholder {
+	font-family: 'Poppins';
+	color: var(--color-black);
+} 
+
+.time > form input[type=checkbox]:checked+label {
+	color: var(--color-black);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 10px;
+}
+  
+.time > form input[type=checkbox]+label {
+	color: var(--color-gray-dark);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 10px;
+
+}
+
+.time > form > input[type='submit'] {
+	width: 35%;
+	height: 2.5rem;
+	margin-top: 5%;
+  margin-left: 65%;
+	border-radius: 100px; 
+	background: var(--color-green);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: var(--color-white);
+	cursor: pointer;
+}
+
+.closeTime {
+	top: 5px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	font-family: 'Poppins';
+    font-weight: bold;
+	font-size: 20px;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	cursor: pointer;
+}
