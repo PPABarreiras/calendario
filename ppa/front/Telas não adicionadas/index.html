@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sistema PPA</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=s
+wap" rel="stylesheet">
+<link
+href="index.css"rel="stylesheet">
+<link
+href="styles.css"rel="stylesheet">
+<link
+href="div.css"rel="stylesheet">
+<link
+href="styles.css"rel="stylesheet">
+<link rel="stylesheet" href="../../Telas Finalizadas/styles/styles.css" >
+</head>
+<body>
+<div class="Template">
+<nav>
+<ul>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Alunos2.png">
+<a class="nav-element" href="">Aluno</a>
+</li>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
+<a class="nav-element" href="">Calendário</a>
+</li>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
+<a class="nav-element" href="">Admin</a>
+</li>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Professor2.png">
+<a class="nav-element" href=""> Professor</a>
+</li>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
+<a class="nav-element" href="">Curso</a>
+</li>
+<li class="li-nav">
+<img class="img-nav" src="C:\Users\Pichau\Downloads\Turma2.png">
+<a class="nav-element" href="">Turmas</a>
+</li>
+</ul>
+<div class="divider"></div>
+</nav>
+<aside>
+<div class="button-container">
+<input type="text" id="numero-turma-input" placeholder="N° da turma">
+<select>
+<option disabled selected="tec-edificacoes">Período</option>
+<option value="tec-informatica">Matutino</option>
+<option value="tec-alimentos">Vespertino</option>
+</select>
+</div>
+<div class="button-tec">
+<select>
+<option disabled selected="tec-edificacoes">Curso</option>
+<option value="tec-edificacoes">Téc. Edificações</option>
+<option value="tec-informatica">Téc. Informática</option>
+<option value="tec-alimentos">Téc. Alimentos</option>
+</select>
+</div>
+<div class="button-wrapper">
+<button class="button" id="buscar-button">Buscar</button>
+<button class="button" id="adicionar-button">Adicionar</button>
+</div>      
+</aside>
+<main>
+<div class="info-container">
+<h3>Informações da turma:</h3>
+<p>Número da turma: <span id="turma-info"></span></p>
+<p>Período: <span id="periodo-info"></span></p>
+<p>Curso: <span id="curso-info"></span></p>
+<button class="delete-button">Deletar</button>
+</div>
+</main>
+</div>
+<script>
+    src="script.js"
+</script>
+</body>
+</html>      
