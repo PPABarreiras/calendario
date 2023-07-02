@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --color-red: #BE1E1F;
+    --color-yellow: #FFB900;
+    --color-green: #4E9E5B;
+    --color-dark-green: #208008;
+    --color-orange: #FF6B00;
+    --color-blue: #0029FF;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray: #EFEFEF;
+    --color-gray-dark: #bdbdbd;
+    --box-shadow-black: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    --text-shadow-black: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    --border-gray: 1px solid rgba(196, 196, 196, 0.25);
+    --border-black: 1px solid #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.showModal {
+    display: flex !important;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.Template{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+    "nav nav"
+    "aside main";
+}
+
+nav {
+    grid-area: nav;
+    height: 10vh;
+    margin-bottom: 4vh;
+    background-color:var(--color-green);
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+    top: -5%;
+    left: 8.5%;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: center; 
+    gap: 2vw; 
+}
+
+.li-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0vh 1vw;
+    padding: 0.5vh 1.3vw;
+    border-radius: 15px;
+    background-color: var(--color-gray);
+}
+
+
+.img-nav{
+    user-select: none;
+    height: 3vw;
+    width: 3vw;
+}
+
+.li-nav:hover{
+    background-color: var(--color-gray-dark);
+}
+
+li a{
+    user-select: none;
+    color:var(--color-black);
+    text-decoration: none;
+}
+
+.divider {
+    position:absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+
+input[name='name'] {
+    border-radius: 7px;
+    display: flex;
+    justify-content: flex-start;
+    height: 7.5vh;
+    margin-top: 80px;
+    margin-left: 1px; 
+    margin-bottom: 20px;
+    width: 100%;
+
+}
+
+aside {
+    
+    grid-area: aside;
+    height: 72vh;
+    margin: 0vh 3vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-green);
+    border-radius: 10px;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    padding: 5%;
+}
+
+main {
+    position: relative;
+    grid-area: main;
+    height: 52vh;
+    margin-right: 3vw;
+    display: flex; 
+    flex-direction: column;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 5%;
+}
+
+button,
+select {
+    margin: 1vh;
+    height: 7.5vh;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: var(--color-gray-dark);
+}
+
+main {
+    grid-area: main;
+    height: 72vh;
+    margin-right: 3vw;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.button-container button {
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    width: auto;
+}
+
+.button-tec {
+    margin-top: 10px;
+    margin-left: -1vh;
+    margin-bottom: 1vh;
+    margin-right: 6.5px;
+    width: auto;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-left: 1px; 
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .Template {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "nav" "aside" "main";
+    }
+
+    select {
+        margin: 1vh;
+        height: 7.5vh;
+        cursor: pointer;
+        border-radius: 15px;
+        text-align: center;
+        background-color: var(--color-white);
+        color: var(--color-black);
+        font-size: 16px;
+        border: none;
+        padding: 0.5em;
+        box-shadow: var(--box-shadow-black);
+        outline: none;
+    }
+
+    nav {
+        height: 6vh;
+    }
+
+    .li-nav {
+        padding: 1.5vh 3.5vw;
+    }
+
+    main,
+    aside {
+        margin: 0vh 3vw;
+    }
+
+    aside {
+        height: 30vh;
+        box-shadow: 40px 40px 25px rgba(138, 134, 134, 0.25);
+    }
+
+    aside button {
+        margin: 0.7vh;
+        height: 3.5vh;
+    }
+
+    main {
+        margin: 2vh;
+        height: 60vh;
+    }
+}
+.busca {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 72vh;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
+    overflow-y: scroll;
+}
+.contentFieldAdc{
+    display: flex;
+    height: 59px;
+    left: 110px;
+    top: 160px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.contentFieldAdc_{
+    display: flex;
+    height: 59px;
+    left: 32px;
+    top: 15px;
+    
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content{
+    display: flex;    
+    left: 15px;
+    top: 10px;          
+}   
+.contentFielAdc1{
+    display: flex;
+    box-sizing: border-box;
+    height: 59px;
+    left: 32px;
+    top: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px; 
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content1{
+    display: flex;
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc2{
+    display: flex;
+    box-sizing: border-box;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content2{
+    display: flex;
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc3{
+    display: flex;
+    box-sizing: border-box;
+    height: 59px;
+    left: -3px;
+    top: 70px;  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content3{
+    display: flex;
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc4{
+    display: flex;
+    box-sizing: border-box;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content4{
+    display: flex;
+    left: 15px;
+    top: 10px;
+}
+
+.contentFieldAdc5{
+    display: flex;
+    box-sizing: border-box;
+    height: 59px;
+    left: -3px;
+    top: 70px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+.content5{
+    display: flex;
+    left: 15px;
+    top: 10px;
+}
+
+
+
+.lixeira{
+    position: absolute;
+
+    width: 30px;
+    left: 1260px;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+.lixeira1{
+    position: absolute;
+    
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira2{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira3{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira4{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lixeira5{
+    position: absolute;
+
+    width: 30px;
+    left: 1245px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis{
+    position: absolute;
+
+    width: 30px;
+    left: 1215px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.lapis1{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis2{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis3{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis4{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+}
+
+.lapis5{
+    position: absolute;
+
+    width: 30px;
+    left: 1200px;
+    top: -1px;
+    cursor: pointer;
+} 
