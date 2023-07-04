@@ -1,452 +1,264 @@
-* {
-    margin: 0px;
-    margin-block: 0;
-    border: 0px;
-    outline: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.containerFull{
+.Template {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+      "nav nav"
+      "aside main";
+  }
+  
+  
+  nav {
+    grid-area: nav;
+    height: 10vh;
+    margin-bottom: 4vh;
+    background-color: var(--color-green);
+    position: relative;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-
-background: #ffffff;
-
-}
-
-.containerField{
+  }
+  
+  
+  nav ul {
+    display: flex;
+    position: relative;
+    top: -5%;
+    left: 2%;
+    flex-direction: row;
+    list-style-type: none;
+  }
+  
+  
+  .li-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0vh 1vw;
+    padding: 0.5vh 1.3vw;
+    border-radius: 15px;
+    background-color: var(--color-gray);
+  }
+  
+  
+  .img-nav {
+    user-select: none;
+    height: 3vw;
+    width: 3vw;
+  }
+  
+  
+  .li-nav:hover {
+    background-color: var(--color-gray-dark);
+  }
+  
+  
+  li a {
+    user-select: none;
+    color: var(--color-black);
+    text-decoration: none;
+  }
+  
+  
+  .divider {
     position: absolute;
-    width: 724px;
-    height: 190px;
-    left: 72px;
-    top: 110px;
-
-    background: #FFFFFF;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-}
-
-.formLoginAdcTurma{
+    top: 90%;
     width: 100%;
-    height: 100%;
-    line-height: 90px;
-    
+    height: 10%;
+    background-color: red;
+  }
+  
+  
+  aside {
+    /* Tela verde de baixo */
+    grid-area: aside;
+    height: 72vh;
+    margin: 0vh 3vw;
+    display: flex;
     flex-direction: column;
+    background-color: var(--color-green);
+    border-radius: 10px;
+    padding: 5%;
+  }
+  
+  
+  main {
+    grid-area: main;
+    height: 52vh;
+    margin-right: 3vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-input[placeholder="Nº da Turma"]{
-
-    position: absolute;
-    width: 420.89px;
-    height: 45px;
-    left: 32px;
-    top: 40px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 30px;
-    padding-left: 7px;
-    
-    color: #9D9D9D;
-}
-
-#registrationTurma{
-    position: absolute;
-    box-sizing: border-box;
-
-    width: 297px;
-    height: 50px;
-    left: 32px;
-    top: 30px;
-    
-    background: #FFFFFF;
-    border: 2px solid #9D9D9D;
-    border-radius: 5px;
-}
-
-
-input[placeholder ="Périodo"]{
-    position: absolute;
-    width: 200.97px;
-    height: 45px;
-    left: 30px;
-    top: 130px;
-    
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 30px;
-    padding-left: 7px;
-    
-    color: #9D9D9D;
-
-}
-
-#registrationPeriodo{
-    position: absolute;
-    box-sizing: border-box;
-
-    width: 297px;
-    height: 50px;
-    left: 380px;
-    top: 15px;
-    
-    background: #FFFFFF;
-    border: 2px solid #9D9D9D;
-    border-radius: 5px;
-    margin: 15px;
-}
-
-select[placeholder="Selecione um Curso"]{
-    position: absolute;
-    width: 200.97px;
-    height: 45px;
-    left: 30px;
-    top: 220px;
-
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 30px;
-    padding-left: 7px;
-
-    color: #9D9D9D;
-}
-
-#SelecioneUmCurso{
-    position: absolute;
-    width: 652px;
-    height: 50px;
-    left: 20px;
-    top: 90px;
-
-    background: #FFFFFF;
-    border: 2px solid #9D9D9D;
-    border-radius: 5px;
-    margin: 15px;
-}
-
-
-button[name ="buttonAdc"]{
-    position: absolute;
-    width: 204px;
-    height: 47px;
-    left: 1221px;
-    top: 130px;
+    /* Adicione esta linha */
+    flex-direction: column;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 5%;
+    /* Adicione esta linha para manter o padding do elemento */
+  }
+  
+  
+  button,
+  select {
+    margin: 1vh;
+    height: 7.5vh;
+    /* Adicione esta linha para definir a largura dos botões */
+    width: 100%;
     cursor: pointer;
-    background: #3ABA19;
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.5);
-    border-radius: 35px;
-}
-
-#buttonAdc{
+    border-radius: 15px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 16px;
+  }
+  
+  
+  button:hover {
+    background-color: var(--color-gray-dark);
+  }
+  
+  
+  main {
+    grid-area: main;
+    height: 72vh;
+    margin-right: 3vw;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  
+  
+  .button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 45px;
-
-    text-align: center;
-
-    color: #000000;
-}
-
-#buttonAdc:hover{
-    background-color: rgb(59, 88, 0);
-}
-
-button[name="buttonBuscar"]{
-    position: absolute;
-    width: 204px;
-    height: 47px;
-    left: 1221px;
-    top: 216px;
-
-    background: #FFFFFF;
-    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.5);
-    border-radius: 35px;
-}
-
-#buttonBuscar{
+    justify-content: flex-end;
+    margin-top: 30;
+  }
+  
+  
+  .button-container button {
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    width: 33vh;
+  }
+  
+  
+  option[disabled] {
+    display: none;
+  }
+  
+  
+  .button-tec {
+    margin-top: 10px;
+    margin-left: -1vh;
+    margin-bottom: 1vh;
+    width: auto;
+  }
+  
+  
+  .button-wrapper {
+    /* ... */
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-left: -1vh; /* Ajuste a */
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  
+  #buscar-button,
+  #adicionar-button,
+  #numero-turma-input {
+    border-radius: 15px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 16px;
+    height: 7.5vh;
+    width: 100%;
     cursor: pointer;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 45px;
-    text-align: center;
-
-    color: #000000;
-}
-
-#buttonBuscar:hover{
-    background-color: rgb(50, 64, 78);
-}
-
-.containerFieldAdc{
-    position: absolute;
-
-    width: 90%;
-    height: 44%;
-    left: 72px;
-    top: 390px;
-
-    background: #FFFFFF;
-    box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    overflow-y: scroll;
-    
-}
-
-.contentFieldAdc{
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: 32px;
-    top: 20px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.content{
-    position: absolute;
-    
-    left: 15px;
-    top: 10px;
-}
-
-.contentFielAdc1{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: 32px;
-    top: 90px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.content1{
-    position: absolute;
-
-    left: 15px;
-    top: 10px;
-}
-
-.contentFieldAdc2{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: -3px;
-    top: 70px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-
-.content2{
-    position: absolute;
-
-    left: 15px;
-    top: 10px;
-}
-
-.contentFieldAdc3{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: -3px;
-    top: 70px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.content3{
-    position: absolute;
-
-    left: 15px;
-    top: 10px;
-}
-
-.contentFieldAdc4{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: -3px;
-    top: 70px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.content4{
-    position: absolute;
-
-    left: 15px;
-    top: 10px;
-}
-
-.contentFieldAdc5{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 1320px;
-    height: 59px;
-    left: -3px;
-    top: 70px;
-    
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
-}
-
-.content5{
-    position: absolute;
-
-    left: 15px;
-    top: 10px;
-}
-
-
-
-.lixeira{
-    position: absolute;
-
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-
-.lixeira1{
-    position: absolute;
-    
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lixeira2{
-    position: absolute;
-
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lixeira3{
-    position: absolute;
-
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lixeira4{
-    position: absolute;
-
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lixeira5{
-    position: absolute;
-
-    width: 30px;
-    left: 1245px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis1{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis2{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis3{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis4{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
-
-.lapis5{
-    position: absolute;
-
-    width: 30px;
-    left: 1200px;
-    top: -1px;
-    cursor: pointer;
-}
+  }
+  
+  
+  #buscar-button:hover,
+  #adicionar-button:hover {
+    background-color: var(--color-gray-dark);
+  }
+  
+  
+  #numero-turma-input {
+    margin-top: 9px;
+    padding: 0 10px;
+    border: 1px solid var(--color-gray);
+    outline: none;
+  }
+  
+  
+  .info-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  
+  
+  .delete-button {
+    margin-top: 10px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+  
+  
+  @media (max-aspect-ratio: 1/1) {
+    .Template {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "nav" "aside" "main";
+    }
+  
+  
+    select {
+      margin: 1vh;
+      height: 7.5vh;
+      cursor: pointer;
+      border-radius: 15px;
+      text-align: center;
+      background-color: var(--color-white);
+      color: var(--color-black);
+      font-size: 16px;
+      border: none;
+      padding: 0.5em;
+      box-shadow: var(--box-shadow-black);
+      outline: none;
+    }
+  
+  
+    nav {
+      height: 6vh;
+    }
+  
+  
+    .li-nav {
+      padding: 1.5vh 3.5vw;
+    }
+  
+  
+    main,
+    aside {
+      margin: 0vh 3vw;
+    }
+  
+  
+    aside {
+      height: 30vh;
+    }
+  
+  
+    aside button {
+      margin: 0.7vh;
+      height: 3.5vh;
+    }
+  
+  
+    main {
+      margin: 2vh;
+      height: 60vh;
+    }
+  }  
