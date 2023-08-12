@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário</title>
+  <link href="../../../styles/index.css" type="text/css" rel="stylesheet">
+  <link href="styles.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="Grid-container"> <!-- Abrange todos os elementos e será utilizado para organizar as tags header, main -->
+    <header>  
+
+
+    </header>
+
+      <div></div>
+      <main> <!-- Abrange o Calendário-->
+
+        <div class="contentCalender"> <!-- Abrange o calendário com o significado de cada cor-->
+          <div class="calender">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <button class="nextAndPreviousCalender"><</button>
+                  </th>
+                  <th colspan="5">Janeiro</th>
+                  <th>
+                    <button class="nextAndPreviousCalender">></button>
+                  </th>
+                </tr>
+                <tr>
+                  <th>D</th>
+                  <th>S</th>
+                  <th>T</th>
+                  <th>Q</th>
+                  <th>Q</th>
+                  <th>S</th>
+                  <th>S</th>
+                </tr>
+              </thead>
+              <tbody id="bodyTable">
+              </tbody>
+            </table>
+          </div>
+
+          <div class="detailsCalender">
+            <div class="ballInfo">
+              <div class="backGreen"></div>
+              <p>Nenhum lembrete</p>
+            </div>
+            <div class="ballInfo">
+              <div class="backYellow"></div>
+              <p>Um lembrete</p>
+            </div>
+            <div class="ballInfo">
+              <div class="backOrange"></div>
+              <p>Dois lembretes</p>
+            </div>
+            <div class="ballInfo">
+              <div class="backRed"></div>
+              <p>Três lembretes</p>
+            </div>
+            <div class="ballInfo">
+              <div></div>
+              <p>Não letivo</p>
+            </div>
+            <div class="ballInfo">
+              <div class="backBlue"></div>
+              <p>Horários vagos</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+      <aside> <!-- Abrange os lembretes e os horários vagos-->
+
+          <div class="seeDetails">      
+            <div class="tasks" id="tasks">
+              <div class="containerViewTasks">
+                <h2 class="titleViewTasks">Lembretes</h2>
+                <div class="contentViewTasks">
+                  <ul id="viewTasks">
+
+                  </ul>
+                </div>
+              </div> 
+            </div>
+            
+            <div class="vacantClasses" id="vacantClasses">
+              <div class="containerViewVacantClasses">
+                <h2 class="titleViewVacantClasses">Horários Vagos</h2>
+                <div class="contentViewVacantClasses">
+                  <ul id="viewVacantClasses">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+        
+        <footer>
+          <address>
+            Site desenvolvido por: Arthur Legal, Jhonatha Ribeiro, Joyce Brito, Pedro Benevides, Roger Ramos, Hiure Cavalcante e  Vitor Cauã. <br>
+            Com Orientação do prof. Ricardo Carvalho.
+          </address>
+        </footer>
+      
+      </div> <!-- FIm da div Grid-Container-->
+
+  <script src="ex.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+  <script src="../../../scripts/showModal.js" type="text/javascript"></script>
+</body>
+</html>
+
