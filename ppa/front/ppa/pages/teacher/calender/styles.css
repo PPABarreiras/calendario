@@ -1,0 +1,352 @@
+.Grid-container{
+  display:grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "nav nav"
+  "main aside"
+  "footer footer";
+}
+
+nav {
+  grid-area: nav;
+  height: 10vh;
+  background: var(--color-gray-dark);
+}
+
+main {
+  grid-area: main;
+  margin-left: 3vw;
+  display: flex; 
+  justify-content: center;
+}
+
+aside{
+  grid-area:aside;
+  margin-right: 3vw;
+  display: flex;
+  align-items:center;
+}
+
+footer{
+  grid-area: footer;
+  height: 10vh;
+  margin-top: 6vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray-dark);
+}
+
+footer address{
+  margin-top: 1vh;
+  margin-left: 3vw;
+  color: var(--color-white);
+  font-size: 0.688rem;
+  font-weight: bold;
+}
+
+.Button-aside{
+  position:absolute;
+  cursor: pointer;
+  user-select: none;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#9c9c9c;
+  color:var(--color-white);
+  box-shadow: var(--box-shadow-black);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 0.625rem;
+  font-size: 1.125rem;
+}
+
+.Button-aside:hover{
+  background-color: #838383;
+}
+
+.contentCalender {
+  display: flex;
+  flex-direction: column;
+}
+
+table{
+  border-spacing: 0.9rem;
+}
+
+.calender > table > thead > tr > th {
+  font-size: 1.563rem;
+  user-select: none;
+}
+
+.calender > table > thead > tr:first-child > th:nth-child(2) {
+  font-weight: 500;
+}
+
+.calender > table > thead > tr:last-child > th {
+  font-weight: 700;
+}
+
+.selected {
+  border: 0.125rem solid var(--color-black) !important;
+}
+
+.calender > table > tbody > tr > td {
+  width: 3.75rem;
+  height:  3.75rem;
+  text-align: center;
+  border: var(--border-gray);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 0.625rem;
+  background: var(--color-white);
+  font-size: 1.563rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+
+.calender > table > tbody > tr > td:empty{
+  cursor:auto;
+ }
+
+.calender > table > tbody > tr > td:not(:empty):hover{
+ border: 0.125rem var(--color-black) solid;
+}
+
+.nextAndPreviousCalender {
+  background: none;
+  cursor: pointer;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.detailsCalender {
+  display: grid;
+  margin-left: 0.6rem;
+  justify-content: left;
+  grid-template-columns: auto auto auto;
+}
+
+.ballInfo {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.ballInfo > div {
+  width: 0.938rem;
+  height: 0.938rem;
+  border: var(--border-black);
+  box-shadow: var(--box-shadow-black);
+  border-radius: 100%;
+  margin-right: 0.5vw;
+}
+
+.backGreen {
+  background-color: var(--color-green) !important;
+  color: var(--color-white);
+}
+
+.backYellow {
+  background-color: var(--color-yellow) !important;
+  color: var(--color-white);
+}
+
+.backOrange {
+  background-color: var(--color-orange) !important;
+  color: var(--color-white);
+}
+
+.backRed {
+  background-color: var(--color-red) !important;
+  color: var(--color-white);
+}
+
+.backBlue {
+  background-color: var(--color-blue);
+}
+
+.nameBlue {
+  color: var(--color-blue) !important;
+}
+
+.captured::after {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  position: absolute;
+  top: 0.313rem;
+  right: 0.313rem;
+  background-color: var(--color-white);
+  border-radius: 50%;
+}
+
+.seeDetails {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tasks, .vacantClasses{
+  width: 90%;
+  height: 45%;
+  display: flex;
+}
+
+.containerViewTasks , .containerViewVacantClasses{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleViewTasks, .titleViewVacantClasses{
+  font-size: 1.8rem;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.contentViewTasks, .contentViewVacantClasses{
+  width: 100%;
+  height: 100%;
+  border: var(--border-gray);
+  box-shadow: var(--box-shadow-black);
+  background-color: var(--color-gray);
+  border-radius: 0.625rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.contentViewTasks ul, .containerViewVacantClasses ul{
+ position: absolute; /*Não permitir que os elementos dentro da ul alterem os container*/
+ width: 80%;
+ margin: 2% 10%;
+ justify-content: center;
+ list-style: none;
+ text-align: justify;
+}
+
+.viewTask, .viewVacantClass{
+  list-style: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+
+ul details{
+  border-radius: 0.4rem;
+}
+
+.viewTask summary{
+  background-color: var(--color-green);
+}
+
+.viewTask summary, .viewVacantClass summary{
+  padding: 1%;
+  padding-left: 3%;
+  border-radius:0.4rem 0.4rem 0 0;
+}
+
+.vacantClasses{
+  margin-top: 3vh; /* Espaçamento entre os Lembretes e o as aulas vagas*/
+}
+
+.none {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.TaskContent, .TimeContent{
+  font-size: 1rem;
+  text-shadow: none;
+  padding: 1.5% 5% 3% 5%;
+  border-radius: 0 0 0.4rem 0.4rem;
+  color: var(--color-black);
+  background-color:  rgb(189, 189, 189, 0.5);
+}
+
+.vacantClass, .capturedVacantClass{
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--color-black);
+  text-shadow: none;
+}
+
+.vacantClass > span {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  margin-right: 0.313rem;
+  background-color: var(--color-blue);
+}
+
+.capturedVacantClass > span {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  margin-right: 0.313rem;
+  background-color: var(--color-green);
+}
+
+@media (max-aspect-ratio:1.25) or (max-width: 500px){
+  /*Para funcionar em dispositivos móveis ou quando o usuário diminue a largura da janela*/
+  
+    .Grid-container{
+      display:grid;
+      justify-content: center;
+      grid-template-rows: auto auto 70vh auto;
+      grid-template-columns: 100%;
+      grid-template-areas: 
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    }
+    
+    main, aside{
+      margin: 0vh 3vw;
+    }
+  
+    .seeDetails{
+      margin-top: 4vh;
+    }
+  }
+  
+  /*Como boa parte dos elementos está definida em rem, alterando o font-size base do html o site consegue ficar mais
+  ajustável às telas, ainda falta testar e aprimorar muito essa parte
+  */
+  
+  @media(max-width: 400px) or (max-height: 400px){
+    html{
+      font-size:8px;
+    }
+  }
+  
+  @media(max-width: 2300px) and (min-width: 1800px){
+    html{
+      font-size:27px;
+    }
+  }
+  
+  @media(max-width: 3500px) and (min-width: 2301px){
+    html{
+      font-size:35px;
+    }
+  }
+  
+  @media(max-width: 4000px) and (min-width: 3501px){
+    html{
+      font-size:55px;
+    }
+  }

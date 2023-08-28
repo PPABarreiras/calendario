@@ -1,0 +1,227 @@
+.reminderBox , .timeBox{
+	width: 100vw;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	animation: back 300ms linear both;
+}
+
+.insertReminder , .insertTime{
+	width: 1.2%;
+	margin: 5rem -5rem 35rem 85rem;
+	background-color: var(--color-white);
+	border-radius: 0.313rem;
+	box-shadow: 0.013rem 0.013rem 0.313rem ;
+	color: var(--color-black);
+	font-size: 0.938rem;
+	cursor: pointer;
+}
+
+.reminder > form , .time > form{
+	width: 100%;
+    padding: 1.5rem;
+	height: auto;
+	display: flex;
+	justify-content:center;
+	justify-items: center;
+	flex-direction: column;	
+}
+
+.reminder, .time{
+	width: 24rem;
+	height: 24rem;
+    padding: 3.125rem 1.25rem;
+    border-radius: 0.625rem;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+  	background-color: var(--color-white);
+	animation: reminder 300ms both;
+}
+
+.closeReminder , .closeTime{
+	top: 0.313rem;
+	right: 0.625rem;
+    font-size: 1.25rem;
+	position: absolute;
+    font-family: 'Poppins';
+	font-weight: bold;
+	background-color: var(--color-white);
+	color: var(--color-black);
+	cursor: pointer;
+}
+
+.subtitle {
+	position: absolute;
+	top: 2%;
+	font-size: 1.25rem;
+}
+
+.TaskForm, .TimeForm{
+	position:absolute;
+	top:9%;
+}
+
+input, select{
+	font-family: 'Poppins';
+	background: none;
+    font-size: 0.875rem;
+	color: var(--color-black);
+	border: var(--border-gray);
+    border-radius: 0.313rem;
+}
+
+.reminder > form > input[type='submit'], .time > form > input[type='submit']{
+	width: 8rem;
+	height: 2.5rem;
+    position:relative;
+    margin: 10% 0%;
+    left: 13rem;
+	border-radius: 6.25rem; 
+	background: var(--color-green);
+	font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 0.9rem;
+	color: var(--color-white);
+	cursor: pointer;
+}
+
+.reminder > form > input[type='submit']:hover, .time > form > input[type='submit']:hover{
+  background: var(--color-dark-green);
+}
+
+/*Animações */
+
+@keyframes reminder {
+	from {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes back {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Elementos de adicionar atividade */
+
+.contentsReminder:focus{
+	border-color: var(--color-black);
+}
+
+input[name='title'] {
+	width: 100%;
+	height: 2rem;
+    margin-bottom: 0.938rem;
+    padding-left: 1%;
+}
+
+input[name='date'] , input[name='note']{
+	width: 45%;
+	height: 2rem;
+    padding-left: 1%;
+}
+
+.reminder > form input::placeholder,
+.reminder > form textarea::placeholder {
+  color: var(--color-black);
+}
+
+textarea[name='description'] {
+	width: 100%;
+	height: 5rem;
+	border: var(--border-gray);
+    font-size: 0.875rem;
+    margin-bottom: 0.938rem;
+    border-radius: 0.313rem;
+    padding-left: 1%;
+    padding-top: 1%;
+    resize: none;
+}
+
+.Type-Matter , .dataInput, .MatterDate{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom:0.938rem;
+}
+
+.Type-Matter select, .MatterDate select{
+	width: 45%;
+	height: 2rem;
+}
+
+.Type-Matter > select > option[value=""], .MatterDate > select > option[value=""]{
+	display: none;
+}
+
+.reminder > form > select:valid{
+	color: var(--color-black);
+}
+
+.contentsTime:focus{
+	border-color: var(--color-black);
+}
+
+/* Elementos de agendar horário */
+
+.time > form > select > option[value=""][disabled] {
+	display: none;
+}
+
+.time > form > select:valid{
+	color: var(--color-black);
+}
+
+.time > form input[name='description'] {
+	width: 100%;
+	height: 5rem;
+}
+
+.vacantTime{
+  margin-top:0.700rem;
+  display:grid;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.vacantTime label, .vacantTime input{
+  margin-bottom: 0.313rem;
+}
+
+.time > form input::placeholder,
+.time > form textarea::placeholder {
+	font-family: 'Poppins';
+	color: var(--color-black);
+} 
+
+.time > form input[type=checkbox]:checked+label , .time > form input[type=checkbox]+label {
+    font-family: 'Poppins';
+	font-weight: bold;
+	font-size: 0.688rem;
+}
+
+.time > form input[type=checkbox]:checked+label{
+  color: var(--color-black);
+}
+
+.time > form input[type=checkbox]+label {
+	color: var(--color-gray-dark);
+}
