@@ -5,81 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../ppa/styles/index.css">
     <title>PPA</title>
 </head>
 <body>
-    <div class="containerFull">
-        <div class="containerField">
-            <form action="form" class="formLoginAdcTurma">
-                <div class="siapeperiodo">
-                    <input placeholder= "Nº da Turma" type="text" name="registrationTurma" id="registrationTurma" />
-                    <input placeholder= "Périodo" type="text" name="registrationPeriodo" id="registrationPeriodo">
-                    </div>
-                <div>
-                    <select placeholder="Selecione um Curso" name = "SelecionaUmCurso" id="SelecioneUmCurso">
-                        <option value="v1">Tec. Informática</option>
-                        <option value="v2">Tec. Edificações</option>
-                        <option value="v3">Tec. Alimento</option>
-                    </select>
-                </div>
-            </form>
+    <div class="Template">
+      <nav>
+        <ul>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroger\Downloads\Alunos2.png">
+            <a class="nav-element" href="">Aluno</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
+            <a class="nav-element" href="">Calendário</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
+            <a class="nav-element" href="">Admin</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroge\Downloads">
+            <a class="nav-element" href=""> Professor</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
+            <a class="nav-element" href="">Curso</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroge\Downloads\Turma2.png">
+            <a class="nav-element" href="">Turmas</a>
+          </li>
+        </ul>
+        <div class="divider"></div>
+      </nav>
+      <aside>
+        <form>
+          <div class="button-turma">
+          <div class="input-label">
+            <label for="numero-turma">N° da turma:</label>
+            <input type="text" id="numero-turma" name="numero-turma" class="button" required>
+          </div>
+          <div class="periodo-container">
+            <label for="periodo" class="periodo-label">Período:</label>
+            
+            <select id="button-container" name="periodo">
+              <option value="Matutino">Matutino</option>
+              <option value="Vespertino">Vespertino</option>
+            </select>
+          </div>
+          
+          </div>
+          
+            
+            <div class="button-tec">
+                <label for="curso">Curso:</label>
+                <select id="button-tec" name="curso" >
+                    <option value="Técnico-Edificações">Téc. Edificações</option>
+                    <option value="Técnico-Informática">Téc. Informática</option>
+                    <option value="Técnico-Alimentos">Téc. Alimentos</option>
+                </select>
             </div>
-                <div>
-                  <button type="submit" name="buttonAdc" id="buttonAdc">Adiconar</button>
-                  </div>
-                  <div>
-                  <button type="submit" name="buttonBuscar" id="buttonBuscar">Buscar</button>
-                </div>
-        <div class="containerFieldAdc">
-            <div class="contentFieldAdc">
-                <div class="content">
-                    <img class = "lixeira "src="lixeira.png">
-                    <img class="lapis" src="lapis.png">
-                <p>Turma: 732 <br>
-                     Curso: Informática</p>
-                </div>
+            
+            <div class="button-wrapper">
+                <button class="button" id="buscar-button">Buscar</button>
+                <button class="button" id="adicionar-button">Adicionar</button>
             </div>
-            <div class="contentFielAdc1">
-                <div class="content1">
-                    <img class = "lixeira1"src="lixeira.png">
-                    <img class="lapis1" src="lapis.png">
-                <p>Turma: 712 <br>
-                    Curso: Informática
-                </p>
-                </div>
-                <div class="contentFieldAdc2">
-                    <div class="content2">
-                        <img class = "lixeira2"src="lixeira.png">
-                        <img class="lapis2" src="lapis.png">
-                    <p>Turma: 621 <br>
-                         Curso: Alimentos</p>
-                    </div>
-                    <div class="contentFieldAdc3">
-                        <div class="content3">
-                            <img class = "lixeira3"src="lixeira.png">
-                            <img class="lapis3" src="lapis.png">
-                        <p>Turma: 632<br>
-                             Curso: Alimentos</p>
-                        </div>
-                        <div class="contentFieldAdc4">
-                            <div class="content4">
-                                <img class = "lixeira4"src="lixeira.png">
-                                <img class="lapis4" src="lapis.png">
-                            <p>Turma: 531<br>
-                                 Curso: Edificações</p>
-                            </div>
-                            <div class="contentFieldAdc5">
-                                <div class="content5">
-                                    <img class = "lixeira5"src="lixeira.png">
-                                    <img class="lapis5" src="lapis.png">
-                                <p>Turma: 511 <br>
-                                     Curso: Edificações</p>
-                         </div>
-                    </div>
-                </div>
-            </div>
+        </form>
+    </aside>
+  
+      <main>
+        <div class="info-container">
+          <h3>Informações da turma:</h3>
+          <div class="numero-turma-container">
+            <span id="numero-turma-error" style="display: none; color: red; font-size: 17px;">Digite apenas números no campo abaixo.</span>
+            Número da turma: <span id="turma-info"></span>
+          </div>
+          <p>Período: <span id="periodo-info"></span></p>
+          <p>Curso: <span id="curso-info"></span></p>
+          <div class="button-group">
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Deletar</button>
+          </div>
         </div>
+        
+      </main>
     </div>
-    
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>
+  
