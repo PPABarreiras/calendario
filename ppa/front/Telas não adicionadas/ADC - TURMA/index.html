@@ -1,148 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-  <title>Sistema PPA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../ppa/styles/index.css">
+    <title>PPA</title>
 </head>
 <body>
-  <div class="Template">
-    <nav>
-      <ul>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Alunos2.png">
-          <a class="nav-element" href="">Aluno</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
-          <a class="nav-element" href="">Calendário</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
-          <a class="nav-element" href="">Admin</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Professor2.png">
-          <a class="nav-element" href=""> Professor</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
-          <a class="nav-element" href="">Curso</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Turma2.png">
-          <a class="nav-element" href="">Turmas</a>
-        </li>
-      </ul>
-      <div class="divider"></div>
-    </nav>
-    <aside>
-      <div class="button-container">
-        <input type="text" id="numero-turma-input" placeholder="N° da turma">
-        <select>
-          <option disabled selected="tec-edificacoes">Período</option>
-          <option value="tec-informatica">Matutino</option>
-          <option value="tec-alimentos">Vespertino</option>
-        </select>
-      </div>
-      <div class="button-tec">
-        <select>
-          <option disabled selected="tec-edificacoes">Curso</option>
-          <option value="tec-edificacoes">Téc. Edificações</option>
-          <option value="tec-informatica">Téc. Informática</option>
-          <option value="tec-alimentos">Téc. Alimentos</option>
-        </select>
-      </div>
-      <div class="button-wrapper">
-        <button class="button" id="buscar-button">Buscar</button>
-        <button class="button" id="adicionar-button">Adicionar</button>
-      </div>
+    <div class="Template">
+      <nav>
+        <ul>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroger\Downloads\Alunos2.png">
+            <a class="nav-element" href="">Aluno</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
+            <a class="nav-element" href="">Calendário</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
+            <a class="nav-element" href="">Admin</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroge\Downloads">
+            <a class="nav-element" href=""> Professor</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
+            <a class="nav-element" href="">Curso</a>
+          </li>
+          <li class="li-nav">
+            <img class="img-nav" src="C:\Users\oroge\Downloads\Turma2.png">
+            <a class="nav-element" href="">Turmas</a>
+          </li>
+        </ul>
+        <div class="divider"></div>
+      </nav>
+      <aside>
+        <form>
+          <div class="button-turma">
+          <div class="input-label">
+            <label for="numero-turma">N° da turma:</label>
+            <input type="text" id="numero-turma" name="numero-turma" class="button" required>
+          </div>
+          <div class="periodo-container">
+            <label for="periodo" class="periodo-label">Período:</label>
+            
+            <select id="button-container" name="periodo">
+              <option value="Matutino">Matutino</option>
+              <option value="Vespertino">Vespertino</option>
+            </select>
+          </div>
+          
+          </div>
+          
+            
+            <div class="button-tec">
+                <label for="curso">Curso:</label>
+                <select id="button-tec" name="curso" >
+                    <option value="Técnico-Edificações">Téc. Edificações</option>
+                    <option value="Técnico-Informática">Téc. Informática</option>
+                    <option value="Técnico-Alimentos">Téc. Alimentos</option>
+                </select>
+            </div>
+            
+            <div class="button-wrapper">
+                <button class="button" id="buscar-button">Buscar</button>
+                <button class="button" id="adicionar-button">Adicionar</button>
+            </div>
+        </form>
     </aside>
-    <main>
-      <div class="info-container">
-        <h3>Informações da turma:</h3>
-        <p>Número da turma: <span id="turma-info"></span></p>
-        <p>Período: <span id="periodo-info"></span></p>
-        <p>Curso: <span id="curso-info"></span></p>
-        <button class="delete-button">Deletar</button>
-      </div>
-    </main>
-  </div>
-X
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Sistema PPA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="Template">
-    <nav>
-      <ul>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Alunos2.png">
-          <a class="nav-element" href="">Aluno</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
-          <a class="nav-element" href="">Calendário</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
-          <a class="nav-element" href="">Admin</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Professor2.png">
-          <a class="nav-element" href=""> Professor</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
-          <a class="nav-element" href="">Curso</a>
-        </li>
-        <li class="li-nav">
-          <img class="img-nav" src="C:\Users\Pichau\Downloads\Turma2.png">
-          <a class="nav-element" href="">Turmas</a>
-        </li>
-      </ul>
-      <div class="divider"></div>
-    </nav>
-    <aside>
-      <div class="button-container">
-        <input type="text" id="numero-turma-input" placeholder="N° da turma">
-        <select>
-          <option disabled selected="tec-edificacoes">Período</option>
-          <option value="tec-informatica">Matutino</option>
-          <option value="tec-alimentos">Vespertino</option>
-        </select>
-      </div>
-      <div class="button-tec">
-        <select>
-          <option disabled selected="tec-edificacoes">Curso</option>
-          <option value="tec-edificacoes">Téc. Edificações</option>
-          <option value="tec-informatica">Téc. Informática</option>
-          <option value="tec-alimentos">Téc. Alimentos</option>
-        </select>
-      </div>
-      <div class="button-wrapper">
-        <button class="button" id="buscar-button">Buscar</button>
-        <button class="button" id="adicionar-button">Adicionar</button>
-      </div>
-    </aside>
-    <main>
-      <div class="info-container">
-        <h3>Informações da turma:</h3>
-        <p>Número da turma: <span id="turma-info"></span></p>
-        <p>Período: <span id="periodo-info"></span></p>
-        <p>Curso: <span id="curso-info"></span></p>
-        <button class="delete-button">Deletar</button>
-      </div>
-    </main>
-  </div>
-  <script type="text/javascript" src="turma.js">
-</body>
-</html>
+  
+      <main>
+        <div class="info-container">
+          <h3>Informações da turma:</h3>
+          <div class="numero-turma-container">
+            <span id="numero-turma-error" style="display: none; color: red; font-size: 17px;">Digite apenas números no campo abaixo.</span>
+            Número da turma: <span id="turma-info"></span>
+          </div>
+          <p>Período: <span id="periodo-info"></span></p>
+          <p>Curso: <span id="curso-info"></span></p>
+          <div class="button-group">
+            <button class="edit-button">Editar</button>
+            <button class="delete-button">Deletar</button>
+          </div>
+        </div>
+        
+      </main>
+    </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+  
