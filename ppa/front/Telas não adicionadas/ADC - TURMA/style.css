@@ -1,264 +1,373 @@
-.Template {
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-areas:
-      "nav nav"
-      "aside main";
-  }
-  
-  
-  nav {
-    grid-area: nav;
-    height: 10vh;
-    margin-bottom: 4vh;
-    background-color: var(--color-green);
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  
-  nav ul {
-    display: flex;
-    position: relative;
-    top: -5%;
-    left: 2%;
-    flex-direction: row;
-    list-style-type: none;
-  }
-  
-  
-  .li-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: pointer;
-    margin: 0vh 1vw;
-    padding: 0.5vh 1.3vw;
-    border-radius: 15px;
-    background-color: var(--color-gray);
-  }
-  
-  
-  .img-nav {
-    user-select: none;
-    height: 3vw;
-    width: 3vw;
-  }
-  
-  
-  .li-nav:hover {
-    background-color: var(--color-gray-dark);
-  }
-  
-  
-  li a {
-    user-select: none;
-    color: var(--color-black);
-    text-decoration: none;
-  }
-  
-  
-  .divider {
-    position: absolute;
-    top: 90%;
-    width: 100%;
-    height: 10%;
-    background-color: red;
-  }
-  
-  
-  aside {
-    /* Tela verde de baixo */
-    grid-area: aside;
-    height: 72vh;
-    margin: 0vh 3vw;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-green);
-    border-radius: 10px;
-    padding: 5%;
-  }
-  
-  
-  main {
-    grid-area: main;
-    height: 52vh;
-    margin-right: 3vw;
-    display: flex;
-    /* Adicione esta linha */
-    flex-direction: column;
-    background-color: var(--color-gray);
-    border-radius: 10px;
-    overflow-y: auto;
-    padding: 5%;
-    /* Adicione esta linha para manter o padding do elemento */
-  }
-  
-  
-  button,
-  select {
-    margin: 1vh;
-    height: 7.5vh;
-    /* Adicione esta linha para definir a largura dos botões */
-    width: 100%;
-    cursor: pointer;
-    border-radius: 15px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    font-size: 16px;
-  }
-  
-  
-  button:hover {
-    background-color: var(--color-gray-dark);
-  }
-  
-  
-  main {
-    grid-area: main;
-    height: 72vh;
-    margin-right: 3vw;
-    background-color: var(--color-gray);
-    border-radius: 10px;
-    overflow-y: auto;
-  }
-  
-  
-  .button-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30;
-  }
-  
-  
-  .button-container button {
-    margin-left: 1vh;
-    margin-bottom: 1vh;
-    width: 33vh;
-  }
-  
-  
-  option[disabled] {
-    display: none;
-  }
-  
-  
-  .button-tec {
-    margin-top: 10px;
-    margin-left: -1vh;
-    margin-bottom: 1vh;
-    width: auto;
-  }
-  
-  
-  .button-wrapper {
-    /* ... */
-    display: flex;
-    justify-content: flex-start;
-    margin-top: auto;
-    margin-left: -1vh; /* Ajuste a */
-    margin-bottom: 30px;
-    width: 100%;
-  }
-  
-  
-  #buscar-button,
-  #adicionar-button,
-  #numero-turma-input {
-    border-radius: 15px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    font-size: 16px;
-    height: 7.5vh;
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  
-  #buscar-button:hover,
-  #adicionar-button:hover {
-    background-color: var(--color-gray-dark);
-  }
-  
-  
-  #numero-turma-input {
-    margin-top: 9px;
-    padding: 0 10px;
-    border: 1px solid var(--color-gray);
-    outline: none;
-  }
-  
-  
-  .info-container {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid var(--color-gray);
-    border-radius: 10px;
-    background-color: var(--color-white);
-  }
-  
-  
-  .delete-button {
-    margin-top: 10px;
-    background-color: var(--color-red);
-    color: var(--color-white);
-  }
-  
-  
-  @media (max-aspect-ratio: 1/1) {
+
+
+    body {
+      overflow-x: hidden;
+    }
+
     .Template {
       display: grid;
-      grid-template-columns: 100%;
-      grid-template-areas: "nav" "aside" "main";
+      grid-template-columns: 35% 65%;
+      grid-template-areas:
+        "nav nav"
+        "aside main";
     }
-  
-  
+
+    nav {
+      grid-area: nav;
+      height: 10vh;
+      margin-bottom: 4vh;
+      background-color: #4E9E5B;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      position: relative;
+      top: -5%;
+      left: 2%;
+      flex-direction: row;
+      list-style-type: none;
+    }
+
+    .li-nav {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      margin: 0vh 1vw;
+      padding: 0.5vh 1.3vw;
+      border-radius: 15px;
+      background-color: #EFEFEF;
+    }
+
+    .img-nav {
+      user-select: none;
+      height: 3vw;
+      width: 3vw;
+    }
+
+    .li-nav:hover {
+      background-color: #bdbdbd;
+    }
+
+    li a {
+      user-select: none;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .divider {
+      position: absolute;
+      top: 90%;
+      width: 100%;
+      height: 10%;
+      background-color: red;
+    }
+
+    aside {
+      /* Tela verde de baixo */
+      grid-area: aside;
+      height: 72vh;
+      margin: 0vh 3vw;
+      display: flex;
+      flex-direction: column;
+      background-color: #4E9E5B;
+      border-radius: 10px;
+      padding: 5%;
+    }
+    
+
+    main {
+      grid-area: main;
+      height: 52vh;
+      margin-right: 3vw;
+      display: flex;
+      /* Adicione esta linha */
+      flex-direction: column;
+      background-color:  #EFEFEF;
+      border-radius: 10px;
+      overflow-y: auto;
+      padding: 5%;
+      /* Adicione esta linha para manter o padding do elemento */
+    }
+    
+    button,
     select {
       margin: 1vh;
       height: 7.5vh;
+      /* Adicione esta linha para definir a largura dos botões */
+      width: 100%;
       cursor: pointer;
       border-radius: 15px;
-      text-align: center;
-      background-color: var(--color-white);
-      color: var(--color-black);
+      background-color:#FFFFFF;
+      color:  #000000;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #bdbdbd;
+    }
+
+    main {
+      grid-area: main;
+      height: 72vh;
+      margin-right: 3vw;
+      background-color:#EFEFEF;
+      border-radius: 10px;
+      overflow-y: auto;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* Alterado para espaço entre */
+      align-items: center; /* Centraliza verticalmente */
+      margin-top: 10px;
+      margin-right: 15px;
+    }
+    
+    .button-container input,
+    .button-container select {
+        flex: 1; /* Cresce para ocupar o espaço restante */
+        margin: 1vh;
+        height: 7.5vh;
+        cursor: pointer;
+        border-radius: 15px;
+        background-color:  #FFFFFF;
+        color: #000000;
+        font-size: 16px;
+    }
+  
+    .periodo-container label {
+      color: white;
+      font-weight: bold;
+      margin-bottom: 4px;
+      text-align: right; /* Alinhar o texto à direita */
+      margin-right: 100px; /* Adicionar margem direita para espaço */
+    }
+    
+   
+  
+
+    option[disabled] {
+      display: none;
+    }
+
+    .button-tec {
+      margin-top: 10px;
+      margin-bottom: 1vh;
+      margin-left: 1px; /* Defina o valor desejado */
+    }
+    
+  
+    .button-tec label {
+      padding-left: 10px; /* Adicione a quantidade de espaço que você deseja aqui */
+      color: rgb(252, 252, 252);
+      font-weight: bold;
+      text-align: right; /* Alinha o texto à direita */
+    }
+    
+    .button-container select {
+        margin: 1vh;
+        height: 50px; /* Ajuste a altura desejada */
+        cursor: pointer;
+        border-radius: 15px;
+        background-color:  #FFFFFF;
+        color:  #000000;
+        font-size: 16px;
+        border: none;
+        padding: 0.5em;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+        outline: none;
+      }
+      button,
+      select,
+      input.button { /* Adicione "input.button" aqui para aplicar estilos ao campo de entrada com a classe .button */
+      margin: 1vh;
+      height: 7.5vh; /* Ajuste a altura conforme necessário */
+      width: 100%; /* Adicione a largura total */
+      cursor: pointer;
+      border-radius: 15px;
+      background-color:  #FFFFFF;
+      color:  #000000;
+      font-size: 16px;
+    }
+    .input-label {
+      display: flex;
+      flex-direction: column; /* Exibir label acima do input */
+      align-items: flex-start; /* Alinhar itens à esquerda */
+    }
+    
+    .input-label label {
+      margin-bottom: 1px;
+      text-align: right; 
+      margin-left: 10px;
+      color: white;
+      font-weight: bold; /* Mantenha o mesmo estilo dos outros labels */
+      font-size: 16px;
+    }
+    .button-turma {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .button-tec label {
+  margin-right: 60px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: right; /* Alinhe o texto à direita */
+}
+
+    
+    .button-turma input{
+      margin: 1vh;
+      height: 53px; /* Ajuste a altura desejada */
+      cursor: pointer;
+      border-radius: 15px;
+      background-color:  #FFFFFF;
+      color:  #000000;
       font-size: 16px;
       border: none;
       padding: 0.5em;
-      box-shadow: var(--box-shadow-black);
+      box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
       outline: none;
     }
-  
-  
-    nav {
-      height: 6vh;
+    
+    .periodo-container {
+      margin-left: 20px; /* Espaçamento entre o input e o select */
     }
-  
-  
-    .li-nav {
-      padding: 1.5vh 3.5vw;
+
+    .button-wrapper {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+      margin-bottom: 30px;
+      width: 100%;
     }
-  
-  
-    main,
-    aside {
-      margin: 0vh 3vw;
+    
+    
+    #numero-turma-error {
+        display: none;
+        color: red;
+        font-size: 15px;
+        margin-right: 5px; /* Ajuste o espaçamento entre a mensagem e o texto */
+      }
+      
+
+    #buscar-button,
+    #adicionar-button,
+    #numero-turma-input {
+      border-radius: 15px;
+      background-color:  #FFFFFF;
+      color:  #000000;
+      font-size: 16px;
+      height: 7.4vh; /* mexe no tamanho do "n da turma */
+      width: 100%;
+      cursor: pointer;
+      margin-top: 210px;
     }
-  
-  
-    aside {
-      height: 30vh;
+
+    #buscar-button:hover,
+    #adicionar-button:hover {
+      background-color:  #bdbdbd;
     }
-  
-  
-    aside button {
-      margin: 0.7vh;
-      height: 3.5vh;
+
+    #numero-turma-input {
+      margin-top: 9px;
+      padding: 0 10px;
+      border: 1px solid #EFEFEF;
+      outline: none;
     }
-  
-  
-    main {
-      margin: 2vh;
-      height: 60vh;
+
+    .info-container {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #EFEFEF;
+      border-radius: 10px;
+      background-color:  #FFFFFF;
     }
-  }  
+    
+
+    .button-group {
+        display: flex;
+        gap: 10px; /* Espaçamento entre os botões */
+      }
+      
+      .edit-button,
+      .delete-button {
+        border-radius: 15px;
+        font-size: 16px;
+        height: 7.5vh;
+        cursor: pointer;
+        padding: 10px 20px; /* Ajuste o preenchimento conforme necessário */
+        border: none; /* Remova a borda padrão */
+      }
+      
+      .edit-button {
+        background-color: #0029FF; /* Cor de fundo para o botão "Editar" */
+        color:  #FFFFFF; /* Cor do texto para o botão "Editar" */
+      }
+      
+      .delete-button {
+        background-color: #DA241C; /* Cor de fundo para o botão "Deletar" */
+        color:  #FFFFFF; /* Cor do texto para o botão "Deletar" */
+      }
+      
+      .edit-button:hover,
+      .delete-button:hover {
+        background-color:  #bdbdbd;
+      }
+      
+
+
+    @media (max-aspect-ratio: 1/1) {
+      .Template {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "nav" "aside" "main";
+      }
+
+      select {
+        margin: 1vh;
+        height: 7.5vh;
+        cursor: pointer;
+        border-radius: 15px;
+        text-align: center;
+        background-color:  #FFFFFF;
+        color:  #000000;
+        font-size: 16px;
+        border: none;
+        padding: 0.5em;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+        outline: none;
+      }
+
+      nav {
+        height: 6vh;
+      }
+
+      .li-nav {
+        padding: 1.5vh 3.5vw;
+      }
+
+      main,
+      aside {
+        margin: 0vh 3vw;
+      }
+
+      aside {
+        height: 30vh;
+      }
+
+      aside button {
+        margin: 0.7vh;
+        height: 3.5vh;
+      }
+
+      main {
+        margin: 2vh;
+        height: 60vh;
+      }
+    }
