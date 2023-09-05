@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Login principal</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Login </title>
   <link href="LoginPrincipal.css" rel="stylesheet" type="text/css" />
-  
+  <link href="index.css" rel="stylesheet" type="text/css" />
+
 </head>
+
 <body>
-  <div class="grid-container">
-    <div class="borda1"></div>
+  <div class="container">
+
+    <img alt = "Logo IFBA campus Barreiras(leva à página no IFBA campus Barreiras)" class = "logo" src ="IFBA.PNG">
+
     <div class="lista">
-      <ul>
-        <li class="item">Aluno</li>
-        <li class="item">Professor</li>
-        <li class="item">Administrador</li>
-      </ul>
+      
+        <img id = "img"src="usuario.png" alt="Imagem de usuario">
+     
+      <div class = "itens">
+        <h1>Você é um: </h1>
+        <div class="item">
+          <button id ="Admin">Admin</button>
+        </div>
+        <div class="item">
+          <button id ="Aluno" >Aluno</button>
+        </div>
+        <div class="item">
+          <button id ="Professor">Professor</button>
+        </div>
+
+      </div>
+
+      <form class = "Admin">
+          <h1>Login: </h1>
+          <input name = "usernameadmin"type = "username" placeholder="Nome" required>
+          <div class = "password">
+            <input name = "passwordadmin"type = "password"  class = "password" placeholder="Senha" required>
+            <img class = "eye" alt = "Olho aberto" src = "show.png">
+          </div>
+          <div class ="back-sub">
+          <button class = "back">Cancelar</button>
+          <input type = "submit">
+        </div>
+      </form>
+
+      <form class = "Professor">
+        <h1>Login: </h1>
+        <input name = "usernameprofessor"type = "username" placeholder="SIAPE" required>
+        <div class = "password">
+          <input name = "passwordprofessor"type = "password" class = "password" placeholder="Senha" required>
+          <img class = "eye" alt = "Olho aberto" src = "show.png">
+        </div>
+        <div class ="back-sub">
+          <button class = "back">Cancelar</button>
+          <input type = "submit">
+        </div>
+      </form>
+
+      <form class = "Aluno">
+        <h1>Login: </h1>
+        <input name = "usernamealuno"type = "username" placeholder="N° de Matrícula" required>
+        <div class = "password">
+          <input name = "passwordaluno"type = "password" class = "password"placeholder="Senha" required>
+          <img class = "eye" alt = "Olho aberto" src = "show.png">
+        </div>
+        <div class ="back-sub">
+          <button class = "back">Cancelar</button>
+          <input type = "submit">
+        </div>
+      </form>
     </div>
-    <div class="borda2"></div>
+
   </div>
+
+  <div class="square" id="qdd-1"></div>
+  <div class="square" id="qdd-2"></div>
+  <div class="square" id="qdd-3"></div>
+
+  <div class="square" id="qdd-4"></div>
+  <div class="square" id="qdd-5"></div>
+  <div class="square" id="qdd-6"></div>
+
+  <div class="square" id="qdd-7"></div>
+  <div class="square" id="qdd-8"></div>
+  <div class="square" id="qdd-9"></div>
+
+  <div class="square" id="qdd-10"></div>
+  <div class="square" id="qdd-11"></div>
+  <div class="square" id="qdd-12"></div>
+  <div class="square" id="qdd-13"></div>
+  <div class="square" id="qdd-14"></div>
+
+  <script src = "script.js" type = "text/javascript"></script>
 </body>
+
 </html>
