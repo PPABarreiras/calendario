@@ -116,7 +116,7 @@ li a{
     margin-bottom: 2px;
 }
 
-input[name='name'] {
+/*input[name='name'] {
     border-radius: 7px;
     display: flex;
     justify-content: flex-start;
@@ -127,7 +127,7 @@ input[name='name'] {
     width: 100%;
 
 }
-
+*/
 aside {
     
     grid-area: aside;
@@ -181,9 +181,12 @@ main {
 }
 
 .button-container-buscar {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
+    border-radius: 7px;
+    justify-content: flex-start;
+    height: 7.5vh;
+    width: 100%;
+    border: 1px solid #ccc; 
+    margin-bottom: 10px; 
 }
 
 .button-container-Adicionar {
@@ -277,46 +280,40 @@ main {
     border-radius: 0px;
     overflow-y: scroll;
 }
-.contentFieldAdc{
-    display: flex;
-    flex-direction: row;
-    height: 59px;
-    left: 110px;
-    top: 160px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 5px;
-    margin-left: 10px;
-
-    background: #FFFFFF;
-    border: 2px solid #000000;
-    border-radius: 5px;
+thead {
+    background-color :#208008;
+    color: white;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;    
-    left: 15px;
-    top: 10px;          
-}   
-
-
-.lixeira{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 500px;
-    cursor: pointer;
+td.border-right, th {
+    border-right: 1px solid #208008;
 }
 
-.lapis{
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
+td, th.border-bottom {
+    border-bottom: 1px solid #208008;
+}
+
+.button-lixeira {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 3px 4px;
     cursor: pointer;
+    margin-right: 4px;
+    height: 4vh;
+}
+
+.button-lapis {
+    display: inline-block;
+    background-color: #208008;
+    color: white;
+    border: none;
+    padding: 2px 0px;
+    cursor: pointer;
+    margin-right: 2px; 
+    height: 4vh;
+}
+.contentsAddTeacher{
+    width: 100%;
 }
