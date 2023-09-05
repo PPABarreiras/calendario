@@ -1,0 +1,12 @@
+{
+  "name":"ppa/api",
+  "description": "Back-end api project in PHP of PPA!",
+  "autoload": {
+      "psr-4": {
+          "Api\\": "Api/"
+      }
+  },
+  "require": {
+    "firebase/php-jwt": "^6.3"
+  }
+}
