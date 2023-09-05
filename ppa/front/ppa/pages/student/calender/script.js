@@ -24,7 +24,12 @@ function clearCalender() {
 }
 
 allThOfThead[0].addEventListener('click', () => {
-  if(month > 0) {
+  if(month == 0){
+    month = 11;
+    clearCalender();
+    createCalender(year, month);
+  }
+  else if(month > 0) {
     month--;
     clearCalender();
     createCalender(year, month);
@@ -32,7 +37,12 @@ allThOfThead[0].addEventListener('click', () => {
 });
 
 allThOfThead[2].addEventListener('click', () => {
-  if(month < 11) {
+  if(month == 11){
+    month = 0;
+    clearCalender();
+    createCalender(year, month);
+  }
+  else if(month < 11) {
     month++;
     clearCalender();
     createCalender(year, month);
@@ -43,22 +53,31 @@ function viewTasks(tasks) {
   const ul = document.querySelector('#viewTasks');
   ul.innerHTML = '';
   tasks.forEach((task) => {
-    const li = document.createElement('li');
-    li.textContent = `${task.title} - ${task.matter}`;
-    li.classList.add('viewTask');
-    li.setAttribute('role', 'button');
-    li.addEventListener('click', function onClick() {
-      const title = document.querySelector('#titleTask');
-      title.textContent = task.title;
-      const date = document.querySelector('#dateViewTask');
-      date.textContent = `${new Date(task.updatedAt).toLocaleString()} - ${new Date(task.deadline).toLocaleString()}`;
-      const note = document.querySelector('#noteTask');
-      note.textContent = task.note;
-      const description = document.querySelector('#descriptionViewTask');
-      description.textContent = task.description;
-      showModal('modalViewTask', 'closeModalViewTask');
-    });
-    ul.appendChild(li);
+    const details = document.createElement('details');
+    details.classList.add('viewTask');
+    const summary = document.createElement('summary');
+    summary.textContent = `${task.title} - ${task.matter}`;
+    const divcontent = document.createElement("div");
+    divcontent.classList.add("TaskContent");
+    const p1 = document.createElement('p');
+    p1.textContent = "Nota: " + task.note;
+    const br1 = document.createElement('br');
+    p1.appendChild(br1);
+    const p2 = document.createElement('p');
+    p2.textContent = "Descrição: " + task.description;
+    const br2 = document.createElement('br');
+    p2.appendChild(br2);
+    const p3 = document.createElement('p');
+    p3.classList.add("DateTask");
+    p3.textContent = `Criado:  ${new Date(task.createdAt).toLocaleString()}`;
+    
+    divcontent.appendChild(p1);
+    divcontent.appendChild(p2);
+    divcontent.appendChild(p3);
+
+    details.appendChild(summary);
+    details.appendChild(divcontent);
+    ul.appendChild(details);
   });
 }
 
@@ -75,44 +94,42 @@ function viewVacantClasses(times) {
   const ul = document.querySelector('#viewVacantClasses');
   ul.innerHTML = '';
   times.forEach((time) => {
-    const li = document.createElement('li');
-    li.textContent = `${time.startTime} - ${time.endTime}`;
-    li.classList.add('viewVacantClass');
-    if(time.captured) li.style.backgroundColor = 'var(--color-green)';
-    li.setAttribute('role', 'button');
-    li.addEventListener('click', function onClick() {
-      if(!li.children.length) {
-        const div = document.createElement('div');
+    const details = document.createElement('details');
+    details.classList.add("viewVacantClass");
+    const summary = document.createElement('summary');
+    summary.style.backgroundColor = 'var(--color-blue)';
+    summary.textContent = `${time.startTime} - ${time.endTime}`;
+    
 
-        const div2 = document.createElement('div');
-        const vacantClass = document.createElement('p');
-        vacantClass.textContent = `${time.infos.matter} - ${time.infos.teacher}`;
-        div2.classList.add('vacantClass');
+    const divcontent = document.createElement("div");
+    divcontent.classList.add("TimeContent");
+    const divvacantclass = document.createElement("div");
+    divvacantclass.classList.add('vacantClass');
+    const pvacantclass = document.createElement('p');
+    pvacantclass.textContent = `${time.infos.matter} - ${time.infos.teacher}`;
+    const spanvacantclass = document.createElement('span');
+    divvacantclass.appendChild(spanvacantclass);
+    divvacantclass.appendChild(pvacantclass);
 
-        const span = document.createElement('span');
-        div2.prepend(span);
-        div2.appendChild(vacantClass);
+    divcontent.appendChild(divvacantclass);
 
-        div.appendChild(div2);
 
         if(time.captured) {
-          const div3 = document.createElement('div');
+          summary.style.backgroundColor = 'var(--color-green)';
+          const divcaptured = document.createElement('div');
+          divcaptured.classList.add('capturedVacantClass');
           const captured = document.createElement('p');
           captured.textContent = `${time.infosCaptured.matter} - ${time.infosCaptured.teacher}`;
-          div3.classList.add('capturedVacantClass');
           const spanCaptured = document.createElement('span');
-          div3.prepend(spanCaptured);
-          div3.appendChild(captured);
-          div.appendChild(div3);
+          divcaptured.prepend(spanCaptured);
+          divcaptured.appendChild(captured);
+          divcontent.appendChild(divcaptured);
         }
-        li.appendChild(div);
-      } else {
-        const div = this.children[0];
-        this.removeChild(div);
-      }
-      this.classList.toggle('infosVacantClass');
-    });
-    ul.appendChild(li);
+
+    details.appendChild(summary);  
+    details.appendChild(divcontent);
+    
+    ul.appendChild(details);
   });
 }
 
@@ -183,6 +200,8 @@ const createCalender = (year, month) => {
   }
 };
 
+createCalender(year, month);
+
 (() => {
   const days = document.querySelectorAll('#bodyTable > tr > td');
   const date = new Date();
@@ -192,3 +211,5 @@ const createCalender = (year, month) => {
       day.click();
   });
 })();
+
+
