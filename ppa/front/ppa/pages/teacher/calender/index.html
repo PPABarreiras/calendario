@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendário - </title>
+  <title>Calendário</title>
   <link href="../../../styles/index.css" type="text/css" rel="stylesheet">
   <link href="styles.css" type="text/css" rel="stylesheet">
+  <link href="forms.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header></header>
+<div class="Grid-container">
+    <nav>
+      <ul class = "nav-elements">
+
+          <li></li>
+
+      </ul>
+    </nav>
+    
     <main>
-      <div class="contentCalender">
+      <div class="contentCalender"> <!-- Abrange o calendário com o significado de cada cor-->
         <div class="calender">
-          <table cellspacing="15">
+          <table>
             <thead>
               <tr>
                 <th>
@@ -65,65 +73,65 @@
           </div>
         </div>
       </div>
+
+      </main>
+
+      <aside> <!-- Abrange os lembretes e os horários vagos-->
+
       <div class="seeDetails">      
         <div class="tasks" id="tasks">
           <div class="containerViewTasks">
-            <button onclick="showModal('reminder', 'closeReminder')">+</button>
             <h2 class="titleViewTasks">Lembretes</h2>
             <div class="contentViewTasks">
+              <button onclick="showModal('reminder', 'closeReminder')" class="Button-aside" id = "Button-Task">+</button>
               <ul id="viewTasks">
+
               </ul>
             </div>
           </div> 
         </div>
         <div class="vacantClasses" id="vacantClasses">
           <div class="containerViewVacantClasses">
-            <button onclick="showModal('time', 'closeTime')">+</button>
             <h2 class="titleViewVacantClasses">Horários Vagos</h2>
             <div class="contentViewVacantClasses">
+              <button onclick="showModal('time', 'closeTime')" class="Button-aside" id = "Button-Vacant">+</button>
               <ul id="viewVacantClasses">
+
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </main>
-  </div>
-
-
-  <div class="modalViewTaskContainer" id="modalViewTask">  
-    <div class="modalViewTaskContent">
-      <button id="closeModalViewTask">x</button>
-      <div class="boxHeader">
-        <div>
-          <h2 class="titleTask" id="titleTask"></h2>
-          <p class="noteTask" id="noteTask"></p>
-        </div>
-        <p class="createdAtAndDeadline" id="dateViewTask"></p>
-      </div>
-      <div class="boxContent">
-        <p class="descriptionViewTask" id="descriptionViewTask"></p>
-      </div>
-    </div>
-  </div>
 
   <div id="reminder" class="reminderBox">
     <div class="reminder">
       <button class='closeReminder' id="closeReminder">x</button>
       <h3 class='subtitle'>Adicionar lembrete</h3>
-      <form>
-        <input class="contentsReminder" type="text" placeholder="Título" name="title" id="titleTask">
+      <form class = "TaskForm">
+        <input class="contentsReminder"  required type="text" placeholder="Título" name="title" id="titleTask">
         <div class="dataInput">
           <input class="contentsReminder" required name="date" type="date" id="dateTask" >
-          <input class="contentsReminder" type="text" placeholder="Nota" name="note" id="noteTask">
+          <input class="contentsReminder"  required type="text" placeholder="Nota" name="note" id="noteTask">
         </div>
         <textarea class="contentsReminder" type="text" placeholder="Descrição" name="description" id="descriptionTask"></textarea>
+        <div class = "Type-Matter">
         <select class="contentsReminder"required id="typeTask">
           <option value="" disabled selected>Tipo do Lembrete</option>
           <option value="1">Atividade</option>
           <option value="3">Prova</option>
           <option value="2">Seminário</option>
+          <option value="4">Recuperação</option>
         </select>
+
+        <select class="matterReminder"required id="typeTask">
+          <option value="" disabled selected>Disciplina</option>
+          <option value="1">Português</option>
+          <option value="3">Matemática</option>
+          <option value="2">Inglês</option>
+          <option value="4">LPII</option>
+          <!-- Options serão criadas pelo PHP de acordo com as matérias da turma e do professor em questão-->
+        </select>
+      </div>
         <input type="submit" value="Confirmar" id="addTask">
       </form>
     </div>
@@ -133,15 +141,19 @@
     <div class="time">
       <button class='closeTime' id="closeTime">x</button>
       <h3 class='subtitle'>Agendar horário</h3>
-      <form>
-        <input class="contentsTime" type="text" placeholder="Seu nome..." name="name" id="name"><br>
+      <form class = "TimeForm">
+        <div class = "MatterDate">
         <select class="contentsTime" required>
           <option value="" disabled selected>Disciplina</option>
           <option value="1">Inglês</option>
           <option value="3">Matemática</option>
           <option value="2">Português</option>
         </select>
-        <textarea class="contentsTime" type="text" placeholder="Descrição" name="description" id="description"></textarea><br>
+
+        <input class="contentsTime" required name="date" type="date" id="dateTime" >
+
+      </div>
+        <textarea class="contentsTime" type="text" placeholder="Descrição" name="description" id="description"></textarea>
         <div class="vacantTime">
           <input type="checkbox" name="vacantTime" value="1">
           <label for="primeiroHorario"> 07:00 - 07:45 </label>
@@ -151,14 +163,30 @@
           <label for="terceiroHorario"> 8:00 - 09:15 </label>
           <input type="checkbox" name="vacantTime" value="4">
           <label for="quartoHorario"> 9:15 - 10:00 </label>
+          <input type="checkbox" name="vacantTime" value="5">
+          <label for="quintoHorario"> 10:20 - 11:05 </label>
+          <input type="checkbox" name="vacantTime" value="6">
+          <label for="sextoHorario"> 11:05 - 11:50 </label>
+          <input type="checkbox" name="vacantTime" value="7">
+          <label for="setimoHorario"> 11:50 - 12:35 </label>
+          <!--Apenas exemplo isso altera de acordo com o curso (Usaremos PHP nisso)-->
         </div>
         <input type="submit" value="Confirmar">
       </form>
     </div>
   </div>
+  </aside>
 
-  <script src="utils.js" type="text/javascript"></script>
+  <footer>
+    <address>
+      Site desenvolvido por: Arthur Legal, Jhonatha Ribeiro, Joyce Brito, Pedro Benevides, Roger Ramos, Hiure Cavalcante e  Vitor Cauã. <br>
+      Com Orientação do prof. Ricardo Carvalho.
+    </address>
+  </footer>
+</div> <!-- Fim do Grid-Container -->
+
   <script src="api.js" type="text/javascript"></script>
+  <script src="ex.js" type="text/javascript"></script>
   <script src="script.js" type="text/javascript"></script>
   <script src="../../../scripts/showModal.js" type="text/javascript"></script>
 </body>
