@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema PPA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gerenADM.css">
+</head>
+<body>
+    <div class="Template">
+        <nav>
+            <ul>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Alunos2.png"> <a class="nav-element" href="">Aluno</a> </li>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Calendário2.png"> <a class="nav-element" href="">Calendário</a> </li>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Adm2.png"> <a class="nav-element" href="">Admin</a> </li>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Professor2.png"> <a class="nav-element" href=""> Professor</a> </li>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Curso2.png"> <a class="nav-element" href="">Curso</a> </li>
+                <li class="li-nav"> <img class="img-nav" src="../Imagens/Turma2.png"> <a class="nav-element" href="">Turmas</a></li>
+            </ul>
+            <div class="divider"></div>
+        </nav>
+        <aside id="asideBuscarEadiciona" class="active">
+            <div class="button-container-buscar">
+                <input class="contentsAddTeacher" type="text" placeholder="  Nome do ADM" required="required" name="name" id="name">
+            </div>
+            <div class="button-container-Adicionar">
+                <div class="button-container-Adicionar">
+                    <input class="contentsAddTeacher custom-input" type="text" placeholder="ID" required="required" name="id" id="id" disabled>
+                    <input class="contentsAddTeacher custom-input" type="text" placeholder="Nome" required="required" name="namep" id="namep">
+                    <input class="contentsAddTeacher custom-input" type="text" placeholder="SIAPE" required="required" name="siape" id="siape">
+                    <input class="contentsAddTeacher custom-input" type="email" placeholder="E-mail" required="required" name="email" id="email">
+                    <input class="contentsAddTeacher custom-input" type="password" placeholder="Senha" required="required" name="password" id="password">
+                </div>
+            </div>
+            
+            <div class="button-wrapper">
+                <button id="buscarButtonBuscar" style="flex-grow: 1;">Buscar</button>
+                <button id="adicionarButtonBuscar" style="flex-grow: 1;">Adicionar</button>
+            </div>
+            <div class="textadd" style="display: none;"><p class="smaller-text">Preencha os campos e clique novamente em adicionar</p></div>
+    <div class="textbusc" style="display: none;"><p class="smaller-text">Digite o nome do ADM e clique novamente em buscar</p></div>
+
+        </aside>
+
+        <main>
+            <div class="busca">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID_ADM</th>
+                            <th>Nome</th>
+                            <th>SIAPE</th>
+                            <th>E-mail</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border-right">    1    </td>
+                            <td class="border-right">Ricardo Corinthiano</td>
+                            <td class="border-right">0000000</td>
+                            <td class="border-right">ricardo@example.com</td>
+                            <td>
+                                <button class="button button-lixeira">Excluir</button>
+                                <button class="button button-lapis">Editar</button>
+                            </td>
+                        </tr>
+                        <tr> 
+                            <td class="border-right"> 2 </td>
+                            <td class="border-right">João Silva</td>
+                            <td class="border-right">1111111</td>
+                            <td class="border-right">joao@example.com</td>
+                            <td>
+                                <button class="button button-lixeira">Excluir</button>
+                                <button class="button button-lapis">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>        
+    </div>
+    <script src="gerenADM.js"></script>
+</body>
+</html>
