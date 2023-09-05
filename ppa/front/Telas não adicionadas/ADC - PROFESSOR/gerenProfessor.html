@@ -20,15 +20,19 @@
         </nav>
         <aside id="asideBuscarEadiciona" class="active">
             <div class="button-container-buscar">
-                <input class="contentsAddTeacher" type="text" placeholder="  Nome do professor" required="required" name="name" id="name">
-            </div>
+                <form class="contentsAddTeacher" action="seu_script_php.php" method="post">
+                    <input class="contentsAddTeacher custom-input" type="text" placeholder="  Nome do professor" required="required" name="name" id="name">
+                </form>
+               </div>
             <div class="button-container-Adicionar">
                 <div class="button-container-Adicionar">
-                    <input class="contentsAddTeacher custom-input" type="text" placeholder="ID" required="required" name="id" id="id" disabled>
-                    <input class="contentsAddTeacher custom-input" type="text" placeholder="Nome" required="required" name="namep" id="namep">
-                    <input class="contentsAddTeacher custom-input" type="text" placeholder="SIAPE" required="required" name="siape" id="siape">
-                    <input class="contentsAddTeacher custom-input" type="email" placeholder="E-mail" required="required" name="email" id="email">
-                    <input class="contentsAddTeacher custom-input" type="password" placeholder="Senha" required="required" name="password" id="password">
+                    <form class="contentsAddTeacher" action="seu_script_php.php" method="post">
+                        <input class="contentsAddTeacher custom-input" type="text" placeholder="ID" required="required" name="id" id="id" disabled>
+                        <input class="contentsAddTeacher custom-input" type="text" placeholder="Nome" required="required" name="namep" id="namep">
+                        <input class="contentsAddTeacher custom-input" type="text" placeholder="SIAPE" required="required" name="siape" id="siape">
+                        <input class="contentsAddTeacher custom-input" type="email" placeholder="E-mail" required="required" name="email" id="email">
+                        <input class="contentsAddTeacher custom-input" type="password" placeholder="Senha" required="required" name="password" id="password">
+                    </form>
                 </div>
             </div>
             
@@ -43,16 +47,41 @@
 
         <main>
             <div class="busca">
-                <div class="contentFieldAdc">
-                    <div class="content">
-                        <p>NOME: Ricardo Corinthiano <br>
-                            SIAPE: 0000000</p>
-                            <img class="lixeira" src="lixeira.png">
-                             <img class="lapis" src="lapis.png">
-                    </div>
-                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id_Professor</th>
+                            <th>Nome</th>
+                            <th>SIAPE</th>
+                            <th>E-mail</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border-right">1</td>
+                            <td class="border-right">Ricardo Corinthiano</td>
+                            <td class="border-right">0000000</td>
+                            <td class="border-right">ricardo@example.com</td>
+                            <td>
+                                <button class="button button-lixeira">Excluir</button>
+                                <button class="button button-lapis">Editar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border-right">2</td>
+                            <td class="border-right">João Silva</td>
+                            <td class="border-right">1111111</td>
+                            <td class="border-right">joao@example.com</td>
+                            <td>
+                                <button class="button button-lixeira">Excluir</button>
+                                <button class="button button-lapis">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </main>        
+        </main>
     </div>
     <script src="gerenProfessor.js"></script>
 </body>
