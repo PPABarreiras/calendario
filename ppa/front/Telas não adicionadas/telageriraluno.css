@@ -1,0 +1,401 @@
+:root {
+    --color-red: #DA241C;
+    --color-yellow: #FFB900;
+    --color-green: #4E9E5B;
+    --color-dark-green: #208008;
+    --color-orange: #FF6B00;
+    --color-blue: #0029FF;
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-gray: #EFEFEF;
+    --color-gray-dark: #bdbdbd;
+    --box-shadow-black: 4px 4px 15px rgba(0, 0, 0, 0.25);
+    --text-shadow-black: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    --border-gray: 1px solid rgba(196, 196, 196, 0.25);
+    --border-black: 1px solid #000000;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .showModal {
+    display: flex !important;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .Template {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+      "nav nav"
+      "aside main";
+  }
+
+  nav {
+    grid-area: nav;
+    height: 10vh;
+    margin-bottom: 4vh;
+    background-color: var(--color-green);
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    position: relative;
+    top: -5%;
+    left: 2%;
+    flex-direction: row;
+    list-style-type: none;
+  }
+
+  .li-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0vh 1vw;
+    padding: 0.5vh 1.3vw;
+    border-radius: 15px;
+    background-color: var(--color-gray);
+  }
+
+  .img-nav {
+    user-select: none;
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .li-nav:hover {
+    background-color: var(--color-gray-dark);
+  }
+
+  li a {
+    user-select: none;
+    color: var(--color-black);
+    text-decoration: none;
+  }
+
+  .divider {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+  }
+
+ aside {
+/* Tela verde de baixo */
+grid-area: aside;
+height: 80vh; 
+margin: 1vh 2vw; 
+display: flex;
+flex-direction: column;
+background-color: var(--color-green);
+border-radius: 10px;
+padding: 2%; 
+}
+
+  main {
+    grid-area: main;
+    height: 52vh;
+    margin-right: 3vw;
+    display: flex;
+    /* Adicione esta linha */
+    flex-direction: column;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 5%;
+    /* Adicione esta linha para manter o padding do elemento */
+  }
+
+  .overlap-container {
+position: relative;
+height: 100%;
+overflow: auto;
+scrollbar-color: var(--color-green) var(--color-white);
+scrollbar-width: thin;
+}
+
+.overlap-area {
+position: absolute;
+width: 100%;
+height: 100px;
+background-color: var(--color-white);
+border: 2px solid var(--color-green);
+border-radius: 10px;
+box-shadow: var(--box-shadow-black);
+}
+
+.area-1 {
+top: 0;
+}
+
+.area-2 {
+top: 120px;
+}
+
+.area-3 {
+top: 240px; 
+}
+
+
+.overlap-container::-webkit-scrollbar {
+width: 10px;
+}
+
+.overlap-container::-webkit-scrollbar-thumb {
+background-color: var(--color-green);
+}
+
+.overlap-container::-webkit-scrollbar-track {
+background-color: var(--color-white);
+}
+  button,
+  select {
+    margin: 1vh;
+    height: 7.5vh;
+    /* Adicione esta linha para definir a largura dos botões */
+    width: 100%;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: var(--color-gray-dark);
+  }
+
+  main {
+    grid-area: main;
+    height: 72vh;
+    margin-right: 3vw;
+    background-color: var(--color-gray);
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+
+  .button-name {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30;
+  }
+
+  .button-name button {
+    margin-left: 1vh;
+    margin-bottom: 1vh;
+    width: 33vh;
+  }
+
+  option[disabled] {
+    display: none;
+  }
+
+  .button-tec {
+    margin-top: 10px;
+    margin-left: vh;
+    margin-bottom: 1vh;
+    width: auto;
+  }
+
+  .button-wrapper {
+    
+    display: flex;
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-left: 1px; 
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  #buscar-button,
+  #adicionar-button,
+  #nome-numero-input {
+    border-radius: 15px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: 16px;
+    height: 7.5vh;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  #buscar-button:hover,
+  #adicionar-button:hover {
+    background-color: var(--color-gray-dark);
+  }
+
+  #nome-numero-input {
+    margin-top: 9px;
+    padding: 0 10px;
+    border: 1px solid var(--color-gray);
+    outline: none;
+  }
+
+  .info-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+
+  .delete-button {
+    margin-top: 10px;
+    background-color: var(--color-red);
+    color: var(--color-white);
+  }
+
+  @media (max-aspect-ratio: 1/1) {
+    .Template {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas: "nav" "aside" "main";
+    }
+
+    select {
+      margin: 1vh;
+      height: 7.5vh;
+      cursor: pointer;
+      border-radius: 15px;
+      text-align: center;
+      background-color: var(--color-white);
+      color: var(--color-black);
+      font-size: 16px;
+      border: none;
+      padding: 0.5em;
+      box-shadow: var(--box-shadow-black);
+      outline: none;
+    }
+
+    nav {
+      height: 6vh;
+    }
+
+    .li-nav {
+      padding: 1.5vh 3.5vw;
+    }
+
+    main,
+    aside {
+      margin: 0vh 3vw;
+    }
+
+    aside {
+      height: 30vh;
+    }
+
+    aside button {
+      margin: 0.7vh;
+      height: 3.5vh;
+    }
+
+    main {
+      margin: 2vh;
+      height: 60vh;
+    }
+  }
+
+  .hidden {
+display: none;
+}
+
+#add-student-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 20px;
+background-color: var(--color-white);
+border: 1px solid var(--color-gray);
+border-radius: 10px;
+box-shadow: var(--box-shadow-black);
+}
+
+#add-student-form h2 {
+margin-bottom: 10px;
+font-size: 24px;
+color: var(--color-black);
+}
+
+#add-student-form input {
+width: 100%;
+margin-bottom: 10px;
+padding: 10px;
+border: 1px solid var(--color-gray);
+border-radius: 5px;
+font-size: 16px;
+outline: none;
+}
+
+#add-student-form button {
+width: 100%;
+margin-top: 10px;
+padding: 10px;
+border: none;
+border-radius: 15px;
+background-color: var(--color-green);
+color: var(--color-white);
+font-size: 16px;
+cursor: pointer;
+}
+
+#add-student-form button:hover {
+background-color: var(--color-dark-green);
+}
+
+/* Estilos para a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2px;
+  }
+  
+  thead th {
+    background-color: green;
+    color: var(--color-black);
+    font-weight: bold;
+    padding: 5px;
+    text-align: left;
+    border: 1px solid green;
+  }
+  
+  tbody td {
+    background-color: var(--color-white);
+    padding: 5px;
+    text-align: left;
+    border: 2px solid green;
+  }
+  
+  /* Estilos para os botões de ação */
+  .delete-button,
+  .edit-button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: --color-white;
+  }
+  
+  .edit-button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
