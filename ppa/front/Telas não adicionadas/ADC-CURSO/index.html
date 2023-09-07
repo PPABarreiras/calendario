@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema PPA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="Template">
+        <nav>
+            <ul>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Alunos2.png">
+                    <a class="nav-element" href="">Aluno</a>
+                </li>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
+                    <a class="nav-element" href="">Calendário</a>
+                </li>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
+                    <a class="nav-element" href="">Admin</a>
+                </li>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Professor2.png">
+                    <a class="nav-element" href=""> Professor</a>
+                </li>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
+                    <a class="nav-element" href="">Curso</a>
+                </li>
+                <li class="li-nav">
+                    <img class="img-nav" src="C:\Users\Pichau\Downloads\Turma2.png">
+                    <a class="nav-element" href="">Turmas</a>
+                </li>
+            </ul>
+            <div class="divider"></div>
+        </nav>
+
+        <aside>
+            <form class = "asideform" action="">
+
+                <input type="text" id="Número-turma-input" placeholder="id_curso" disabled>
+                <input type="text" id="Número-turma-input" placeholder="Nome">
+                <input type="text" id="Número-turma-input" placeholder="Descricao do curso">
+                
+                <div class="button-wrapper">
+                    <input type = "submit" value ="Buscar">
+                    <input type = "submit" value ="Adicionar">
+                </div>
+            </form>
+            
+        </aside>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="codigo">id_curso</th>
+                        <th class="codigo">Nome</th>
+                        <th class="codigo">Descricao</th>
+                        <th class="codigo">ações</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="codigo1">1</td>
+                        <td class="codigo1">Informatica</td>
+                        <td class="codigo1">Garotos de programa</td>
+                        <td class="codigo1"><button>Excluir</button></td>
+                        <td class="codigo1"><button>Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

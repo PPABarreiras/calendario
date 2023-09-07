@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+.showModal {
+    display: flex !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.Template {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-template-areas:
+        "nav nav"
+        "aside main";
+}
+
+nav {
+    grid-area: nav;
+    height: 10vh;
+    margin-bottom: 4vh;
+    background-color: #4E9E5B;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    position: relative;
+    top: -5%;
+    left: 2%;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.li-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: 0vh 1vw;
+    padding: 0.5vh 1.3vw;
+    border-radius: 15px;
+    background-color: #EFEFEF;
+}
+
+.img-nav {
+    user-select: none;
+    height: 3vw;
+    width: 3vw;
+}
+
+.li-nav:hover {
+    background-color: #bdbdbd;
+}
+
+li a {
+    user-select: none;
+    color: #000000;
+    text-decoration: none;
+}
+
+.divider {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 10%;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    position: relative;
+    height: 72vh;
+    margin: 0vh 3vw;
+    padding: 5vh 5vw;
+    background-color: #4E9E5B;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+main {
+    grid-area: main;
+    height: 52vh;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column; /* Adicione esta linha */
+    background-color: #EFEFEF;
+    border-radius: 10px;
+    overflow-y: auto;
+    padding: 5%; /* Adicione esta linha para manter o padding do elemento */
+}
+
+select {
+    margin-top: 2vh;
+    height: 7.5vh;
+    width: 100%; /* Adicione esta linha para definir a largura dos botões */
+    user-select: none;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 16px;
+}
+
+option[disabled] {
+    display: none;
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    width: 90%;
+}
+ 
+input[type=text]{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    padding: 2%;
+    color: #000000;
+    font-size: 16px;
+    height: 7.5vh;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+input[type=text]:focus{
+    border: 1px solid #000000;
+}
+
+input[type=submit]{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    color: var(--color-black);
+    font-size: 16px;
+    height: 7.5vh;
+    width: 40%;
+    cursor: pointer;
+}
+
+input[type = submit]:hover{
+    background-color: #bdbdbd;
+}
+
+.info-container { /*Informações do curso, aparecerá apenas quando tiver os dados do banco de dados*/
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.delete-button { /*Aparecerá para excluir alguma turma*/
+    margin-top: 10px;
+    background-color: var(--color-red);
+    color: #FFFFFF;
+}
+
+input{
+    margin-bottom: 2vh;
+}
+@media (max-aspect-ratio: 1/1) {
+    .Template {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: "nav" "aside" "main";
+    }
+
+    select {
+        height: 5vh;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    input[type = submit], input[type=text]{
+        height: 5vh;
+    }
+
+    nav {
+        height: 8vh;
+    }
+
+    .li-nav {
+        padding: 1.5vh 3.5vw;
+    }
+
+    main, aside {
+        margin: 0vh 3vw;
+    }
+
+    aside {
+        height: 35vh;
+    }
+
+    main {
+        margin: 2vh;
+        min-height: 60vh;
+    }
+
+}
+.codigo {
+    background-color: #028142;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    overflow: auto;
+}
+.codigo1 {
+    background-color: #f4f5f4;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    overflow: auto;
+}
