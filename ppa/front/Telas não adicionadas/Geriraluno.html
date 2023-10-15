@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sistema PPA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="telageriraluno.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+  <div class="Template">
+    <nav>
+      <ul>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Alunos2.png">
+          <a class="nav-element" href="">Aluno</a>
+        </li>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Calendário2.png">
+          <a class="nav-element" href="">Calendário</a>
+        </li>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Adm2.png">
+          <a class="nav-element" href="">Admin</a>
+        </li>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Professor2.png">
+          <a class="nav-element" href=""> Professor</a>
+        </li>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Curso2.png">
+          <a class="nav-element" href="">Curso</a>
+        </li>
+        <li class="li-nav">
+          <img class="img-nav" src="C:\Users\Pichau\Downloads\Turma2.png">
+          <a class="nav-element" href="">Turmas</a>
+        </li>
+      </ul>
+      <div class="divider"></div>
+    </nav>
+      <aside>
+          <div id="add-options" class="hidden">
+            
+            <form id="add-student-form">
+              <h2>Adicionar Aluno</h2>
+              <input type="text" id="aluno-nome" placeholder="Nome">
+              <input type="email" id="aluno-email" placeholder="Email">
+              <input type="password" id="aluno-senha" placeholder="Senha">
+              <input type="text" id="aluno-id-classe" placeholder="ID de Classe">
+              <button type="submit" class="button" id="confirm-add-button">Confirmar</button>
+              <button class="button" id="cancel-add-button">Cancelar</button>
+            </form>
+          </div>
+          
+          <div class="button-name">
+            <input type="text" id="nome-numero-input" placeholder="Nome">
+          </div>
+          <div class="button-matricula">
+            <input type="text" id="nome-numero-input" placeholder="Número de matrícula">
+          </div>
+          <div class="button-wrapper">
+            <button class="button" id="buscar-button">Buscar</button>
+            <button class="button" id="adicionar-button">Adicionar</button>
+          </div>
+    </aside>
+
+    <main>
+      <div class="overlap-container">
+        <table class="info-container">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+        
+            <tr>
+              <td>Nome do Aluno</td>
+              <td>email@exemplo.com</td>
+              <td>
+                <button class="delete-button">Excluir</button>
+                <button class="edit-button">Editar</button>
+              </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+      <script  src="geriraluno.js">
+  
+        </script>
+  
+</form>
+</div>
+    
+  </div>
